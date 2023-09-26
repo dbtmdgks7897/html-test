@@ -9,10 +9,6 @@ a {
   color: gray;
 }
 
-div {
-  margin-top: 2%;
-}
-
 button {
   margin-top: 2%;
   height: 40px;
@@ -24,6 +20,9 @@ header {
   display: block;
   /* 로그인 페이지에는 안보이게 설정 */
   position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   width: 100%;
   height: 56px;
   background-color: yellow;
@@ -41,10 +40,6 @@ footer {
   width: 100%;
   height: 56px;
   background-color: red;
-}
-
-.info {
-  font-weight: bold;
 }
 
 .container {
