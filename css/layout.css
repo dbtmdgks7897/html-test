@@ -9,10 +9,6 @@ a {
   color: gray;
 }
 
-div {
-  margin-top: 2%;
-}
-
 button {
   margin-top: 2%;
   height: 40px;
@@ -56,4 +52,5 @@ footer {
   min-height: 800px;
   max-width: 768px;
   margin: 0 auto;
+  border-radius: 20px;
 }
