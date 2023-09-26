@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout.css">
+    <title>로그인</title>
+    <style>
+        header{
+            display: none;
+        }
+        footer{
+            display: none;
+        }
+
+        /* class */
+        .login-container {
+            width: 40%;
+            margin: auto;
+            margin-top: 15%;
+            padding: 1%
+        }
+
+        .social-login>button {
+            width: 100%;
+        }
+
+        .input-item>label {
+            color: black;
+            font-weight: bold;
+            font-size: 1.2vw;
+        }
+
+        .input-item>input {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            margin-top: 6%;
+        }
+
+        .input-item>input:focus {
+            border-color: #0982f0;
+            outline: none;
+        }
+
+        .herf {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .herf>a {
+            font-size: 10px;
+        }
+
+        /* id */
+        #every-ai {
+            /* 디자인 요소 */
+            color: blue;
+        }
+
+        #login-button {
+            background: #0089EC;
+            width: 100%;
+            height: 50px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+        <!-- 로그인 컨테이너 전체 -->
+        <div class="login-container">
+            <!-- 안내 문구 -->
+            <span class="info">Welcome to</span> <span id="every-ai" class="info">Every AI</span>
+            <h2>로그인</h2>
+            <!-- 입력 박스 -->
+            <div class="input-box">
+                <!-- 아이디 입력 -->
+                <div class="input-item">
+                    <label for="id">등록한 아이디를 입력해주세요</label><br>
+                    <input type="text" id="id" placeholder="아이디">
+                </div>
+                <!-- 비밀번호 입력 -->
+                <div class="input-item">
+                    <label for="password">등록한 비밀번호를 입력해주세요</label><br>
+                    <input type="password" id="password" placeholder="패스워드">
+                </div>
+                <!-- 로그인 버튼 -->
+                <button id="login-button">로그인</button>
+            </div>
+
+            <!-- 회원가입 / 찾기 링크 -->
+            <!-- class 이름 수정 필요 -->
+            <div class="herf">
+                <a href="/">회원가입</a>
+                <a href="/">아이디 / 패스워드</a>
+            </div>
+            <!-- 소셜 로그인 -->
+            <div class="social-login">
+                <button id="login-kakao">카카오 로그인</button>
+                <button id="login-naver">네이버 로그인</button>
+                <button id="login-google">구글 로그인</button>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

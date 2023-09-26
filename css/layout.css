@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  background: rgb(212, 212, 212);
+}
+
+a {
+  text-decoration-line: none;
+  /* 색 변경 필요 */
+  color: gray;
+}
+
+div {
+  margin-top: 2%;
+}
+
+button {
+  margin-top: 2%;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+header {
+  display: block;
+  /* 로그인 페이지에는 안보이게 설정 */
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  background-color: yellow;
+  z-index: 1;
+}
+
+footer {
+  display: block;
+  /* 로그인 페이지에는 안보이게 설정 */
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6rem;
+  width: 100%;
+  height: 56px;
+  background-color: red;
+}
+
+.info {
+  font-weight: bold;
+}
+
+.container {
+  background-color: white;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100vh;
+  /* 컨테이너 안에 컨텐츠 들어가면 삭제 필요 */
+  min-height: 800px;
+  max-width: 768px;
+  margin: 0 auto;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout.css">
+    <title>회원가입 성공</title>
+    <style>
+        header{
+            display: none;
+        }
+        footer{
+            display: none;
+        }
+
+        /* class */
+        .sign-up-success-container {
+            border: 1px solid black;
+            width: 40%;
+            margin: auto;
+            margin-top: 15%;
+            padding: 5%;
+        }
+        .user-nick{
+            color: #0982f0;
+        }
+        .bold{
+            font-weight: bold;
+        }
+
+        /* id */
+        #logo{
+            margin: 0 15%;
+        }
+        #go-main{
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="container">
+        <!-- 전체 컨테이너 -->
+        <div class="sign-up-success-container">
+            <!-- 로고 -->
+            <img id="logo" src="img/logo.png" alt="로고 이미지" width="70%">
+            <p>
+                Congraulations to <span class="user-nick">#5555</span>
+            </p>
+            <p class="bold">
+                회원가입에 성공하였습니다!
+            </p>
+            <p>
+                앞으로 활동하게 될 닉네임은 <span class="user-nick">#5555</span>입니다
+            </p>
+            <!-- 이미지 추가 필요 -->
+            <img src="img/logo.png" alt="무슨 이미지?" width="100%">
+            <button id="go-main">메인 화면으로 가기</button>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
