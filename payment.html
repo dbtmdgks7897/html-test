@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <title>결제하기</title>
+    <style>
+      header {
+        display: none;
+      }
+      footer {
+        display: none;
+      }
+
+      /* class */
+
+      .payment-container {
+        width: 85%;
+        height: 100vh;
+        margin: auto;
+        padding: 1%;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+      }
+
+      .payment-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .payment-main-title {
+        font-size: 1.2vw;
+        color: #5e5e67;
+        margin: 2%;
+      }
+
+      .payment-category {
+        border-bottom: 1px solid #d9d9d9;
+      }
+
+      .payment-category-title,
+      .payment-category-items {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .payment-category-title > div {
+        flex-grow: 1;
+        width: 50%;
+      }
+      .payment-sub-title {
+        display: flex;
+        align-items: center;
+        color: #adadad;
+        text-align: center;
+      }
+      .payment-sub-items {
+        display: flex;
+        color: #adadad;
+        text-align: center;
+        margin-top: 2%;
+      }
+
+      .payment-sub-title > div {
+        flex-grow: 1;
+        width: 33%;
+      }
+      .payment-sub-items > div {
+        flex-grow: 1;
+        width: 33%;
+      }
+
+      .payment-basic-items-content {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 1%;
+      }
+
+      .payment-basic-items-content > img {
+        margin-right: 2%;
+      }
+      .payment-basic-items-content > span {
+        margin-right: 2%;
+        font-size: 0.9vw;
+        color: #6a6a6a;
+        font-weight: 300;
+      }
+      .payment-basic-sub-item {
+        color: blue;
+        font-size: 1vw;
+        font-weight: 400;
+      }
+
+      /*총 결제금액*/
+      .payment-total-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 2%;
+        font-weight: 400;
+        font-size: 1.1vw;
+        color: #9d9d9d;
+      }
+
+      .payment-total-list-money {
+        color: blue;
+      }
+
+      /* id */
+      #payment-title {
+        padding: 5% 0 3% 0;
+        border-bottom: 2px solid #d9d9d9;
+      }
+
+      #payment-title > span {
+        font-size: 1.5vw;
+        font-weight: 400;
+      }
+      #payment-order-list-detail {
+        display: flex;
+      }
+      #payment-order-img {
+        border-radius: 10px;
+        float: left;
+      }
+      #payment-order-title {
+        padding: 2%;
+      }
+      #payment-order-title > span {
+        font-weight: 600;
+      }
+      #payment-company {
+        display: flex;
+        align-items: center;
+        padding-top: 1%;
+      }
+      #payment-company-img {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      #payment-company-img > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #payment-company > span {
+        padding-left: 3%;
+        font-size: 1vw;
+        color: #9d9d9d;
+      }
+      #payment-main-items-title > span {
+        font-size: 1vw;
+        font-weight: 600;
+        color: #6a6a6a;
+        padding-left: 2%;
+      }
+      /* 기본항목 */
+      #payment-basic-items-content-group {
+        padding-left: 5%;
+      }
+
+      #payment-sub-items-count-check > select {
+        padding: 2% 10%;
+        border-radius: 0;
+        border: 1px solid #d9d9d9;
+      }
+      /* 옵션항목 */
+      #payment-option {
+        border-bottom: 1px solid #d9d9d9;
+      }
+
+      #payment-option-page {
+        margin: 2%;
+      }
+
+      #payment-option-page > label {
+        color: #595959;
+        font-weight: 400;
+      }
+      /* 마일리지 */
+      #payment-mileage-list {
+        padding-top: 5%;
+      }
+
+      #payment-mileage-content {
+        border-bottom: 1px solid #d9d9d9;
+        padding: 2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      #payment-mileage-content-title {
+        font-size: 1vw;
+        font-weight: 400;
+        color: #595959;
+      }
+
+      #payment-mileage-content-detail {
+        width: 70%;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+      }
+
+      #payment-mileage-content-detail > input {
+        font-size: 1vw;
+        border-radius: 0;
+        border: 1px solid #d9d9d9;
+        width: 60%;
+        padding: 2%;
+      }
+      #payment-mileage-content-detail > span {
+        font-size: 0.7vw;
+        margin-left: 2%;
+        color: #9d9d9d;
+      }
+
+      #payment-mileage-content > button {
+        width: 15%;
+        font-size: 1vw;
+        color: #595959;
+      }
+      /* 결제방식 */
+      #payment-plan-list {
+        padding-top: 5%;
+      }
+
+      /*결제 안내사항*/
+      #payment-notice {
+        padding-top: 5%;
+        border-bottom: 1px solid #d9d9d9;
+      }
+      #payment-notice-title {
+        margin: 2%;
+        font-size: 0.8vw;
+        color: #9d9d9d;
+      }
+
+      /*요청 사항*/
+      #payment-request-textbox {
+        margin: 3% 0;
+      }
+      #payment-request-textbox > textarea {
+        width: 100%;
+        height: 100px;
+        border: 1px solid #d9d9d9;
+        font-size: 0.8vw;
+        color: #9d9d9d;
+        padding-top: 2%;
+      }
+
+      /*총 결제금액*/
+      #payment-total {
+        border: 1px solid #d9d9d9;
+        padding: 1%;
+        margin-bottom: 5%;
+      }
+      #payment-total-money-last {
+        font-size: 1.8vw;
+        font-weight: 700;
+        color: #4e4e4e;
+      }
+
+      #payment-total-money-last-number {
+        font-size: 1.8vw;
+        font-weight: 700;
+        color: blue;
+      }
+
+      /*결제 동의 & 결제하기 버튼 */
+      #payment-agree-paybtn {
+        position: absolute;
+        width: 100%;
+        max-width: 768px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 3px 3px 3px #f1f1f1 inset;
+        background-color: white;
+      }
+      #payment-agree-paybtn > span{
+        padding: 5%;
+        color: #9d9d9d;
+      }
+
+      #payment-agree-paybtn > button {
+        margin: 0 5% 0 0;
+        width: 30%;
+        border-radius: 15px;
+        font-size: 1.5vw;
+        color: white;
+        background-color: #3E9CED;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+    <div class="container">
+      <!-- 결제 전체 컨테이너 -->
+      <div class="payment-container">
+        <!-- 결제하기 타이틀 -->
+        <div id="payment-title">
+          <span>결제하기</span>
+        </div>
+        <!-- 주문내역 -->
+        <div id="payment-order-list">
+          <div class="payment-main-title">
+            <span>주문내역</span>
+          </div>
+          <div id="payment-order-list-detail">
+            <img
+              id="payment-order-img"
+              src="img/example.png"
+              alt="결제 이미지"
+              width="30%"
+            />
+            <div id="payment-order-title">
+              <span>'로고 디자인' 심플, 감각적인 로고를 제작해 드립니다.</span>
+              <div id="payment-company">
+                <div id="payment-company-img">
+                  <img
+                    id="payment-company-profile"
+                    src="img/example.png"
+                    alt="결제 이미지"
+                  />
+                </div>
+                <span>하늘 그리다</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 기본항목 -->
+        <div class="payment-category" id="payment-basic-list">
+          <div class="payment-category-title">
+            <div class="payment-main-title">
+              <span>기본항목</span>
+            </div>
+            <div class="payment-sub-title">
+              <div>수량</div>
+              <div>작업일</div>
+              <div>금액</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="payment-category-title">
+            <div>
+              <div class="payment-main-title" id="payment-main-items-title">
+                <span>메인페이지</span>
+              </div>
+
+              <div id="payment-basic-items-content-group">
+                <div class="payment-basic-items-content">
+                  <img id="" src="img/check.png" alt="체크 이미지" width="8%" />
+                  <span>시안개수 : 1개</span>
+                  <img id="" src="img/i.png" alt="설명 이미지" width="7%" />
+                </div>
+
+                <div class="payment-basic-items-content">
+                  <img id="" src="img/check.png" alt="체크 이미지" width="8%" />
+                  <span>원본파일 제공</span>
+                  <img id="" src="img/i.png" alt="설명 이미지" width="7%" />
+                </div>
+
+                <div class="payment-basic-items-content">
+                  <img id="" src="img/check.png" alt="체크 이미지" width="8%" />
+                  <span>상업적 이용 가능</span>
+                  <img id="" src="img/i.png" alt="설명 이미지" width="7%" />
+                </div>
+
+                <div class="payment-basic-items-content">
+                  <img id="" src="img/check.png" alt="체크 이미지" width="8%" />
+                  <span>반응형 디자인</span>
+                  <img id="" src="img/i.png" alt="설명 이미지" width="7%" />
+                </div>
+
+                <div class="payment-basic-items-content">
+                  <img id="" src="img/check.png" alt="체크 이미지" width="8%" />
+                  <span>페이지수:1페이지</span>
+                  <img id="" src="img/i.png" alt="설명 이미지" width="7%" />
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-sub-items">
+              <div id="payment-sub-items-count-check">
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="payment-basic-sub-item">{작업가능일}</div>
+              <div class="payment-basic-sub-item">{기본항목금액}</div>
+            </div>
+          </div>
+        </div>
+        <!-- 옵션항목 -->
+        <div class="payment-category" id="payment-option-list">
+          <div class="payment-category-title">
+            <div class="payment-main-title">
+              <span>옵션항목</span>
+            </div>
+            <div class="payment-sub-title">
+              <div>수량</div>
+              <div>작업일</div>
+              <div>금액</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="payment-category-title" id="payment-option">
+            <div id="payment-option-page">
+              <label><input type="radio" name="" value="" /> 페이지 추가</label>
+            </div>
+
+            <div class="payment-sub-items">
+              <div id="payment-sub-items-count-check">
+                <select>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="payment-basic-sub-item">{작업가능일}</div>
+              <div class="payment-basic-sub-item">{기본항목금액}</div>
+            </div>
+          </div>
+        </div>
+        <!-- 마일리지 -->
+        <div class="payment-category" id="payment-mileage-list">
+          <div class="payment-category-title">
+            <div class="payment-main-title">
+              <span>마일리지</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="payment-mileage-content">
+          <span id="payment-mileage-content-title"> 마일리지 사용 </span>
+          <div id="payment-mileage-content-detail">
+            <input value="0원" />
+            <span>보유마일리지: {마일리지} 원</span>
+          </div>
+          <button type="button">사용</button>
+        </div>
+
+        <!-- 결제방식 -->
+
+        <div class="payment-category" id="payment-plan-list">
+          <div class="payment-category-title">
+            <div class="payment-main-title">
+              <span>결제방식</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="payment-category-title" id="payment-plan">
+            <div id="payment-option-page">
+              <label><input type="radio" name="" value="" /> 페이 결제</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 결제 안내사항-->
+        <div class="payment-category" id="payment-notice">
+          <div class="payment-category-title">
+            <div id="payment-notice-title">
+              <span>결제안내사항</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 요청 사항-->
+
+        <div class="payment-category" id="payment-request-list">
+          <div class="payment-category-title">
+            <div class="payment-main-title">
+              <span>요청사항</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="payment-category-title">
+            <div id="payment-request-textbox">
+              <textarea> 요청사항을 작성해주세요 </textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- 총 결제 금액 -->
+        <div id="payment-total">
+          <div class="payment-category">
+            <div class="payment-category-title">
+              <div class="payment-main-title">
+                <span>총 결제 금액</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="payment-total-list">
+            <span>주문금액</span>
+            <span class="payment-total-list-money"
+              >{ 기본항목금액 + 옵션항목금액 }</span
+            >
+          </div>
+          <div class="payment-total-list">
+            <span>마일리지할인</span>
+            <span class="payment-total-list-money">
+              { 사용 마일리지 금액 }</span
+            >
+          </div>
+          <div class="payment-total-list">
+            <span>수수료</span>
+            <span class="payment-total-list-money"> { 수수료 금액 } </span>
+          </div>
+          <hr style="color: #9d9d9d" />
+
+          <div class="payment-total-list">
+            <span id="payment-total-money-last">총 결제 금액</span>
+            <span id="payment-total-money-last-number">{ 총 결제 금액 }</span>
+          </div>
+        </div>
+      </div>
+      <!-- 결제 동의 & 결제하기 버튼-->
+      <div id="payment-agree-paybtn">
+        <span>위 내용을 확인했고 결제 내용에 동의합니다.</span>
+        <button type="button">결제하기</button>
+      </div>
+    </div>
+    <!-- container -->
+
+    <footer style="color: yellow">dddd</footer>
+  </body>
+</html>
