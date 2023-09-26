@@ -1,0 +1,11 @@
+div{
+   border: 2px solid red; 
+}
+
+h2{
+   color: rgba(0, 0, 0, 0.7);
+}
+.wishlist-inner-box{
+    width: 100%;
+    height: 700px;
+}
