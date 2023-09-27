@@ -1,11 +1,95 @@
-div{
-   border: 2px solid red; 
+/* class */
+/* div{
+   border: 2px solid red;
+} */
+.container {
+   margin-top: 80px;
 }
 
-h2{
-   color: rgba(0, 0, 0, 0.7);
+.wishlist-title-font{
+   font-size: 30px;
+   color: rgba(0, 0, 0, 0.5);
 }
-.wishlist-inner-box{
-    width: 100%;
-    height: 700px;
+.wishlist-dropdown{
+   display: flex;
+   justify-content: space-between;
+}
+
+.sort-dropdowns {
+   display: flex;  
+}
+.category-details{
+   height: 30px;
+   width: 150px;
+   margin-right: 10px;
+   margin-top: 20px;
+   margin-bottom: 15px;
+}
+.wishlist-sort{
+   display: flex;
+   align-items: center;
+}
+
+.service-card-list {
+   height: 80%;
+   flex-wrap: wrap;
+   padding: 0px 4px;
+   gap: 10px;
+}
+
+.service-card {
+   /* 크기 조정 필요 */
+   width: 100%;
+   margin-bottom: 30px;
+   background-color: #ffe572;
+   height: 30%;
+   display: flex;
+}
+
+.service-image {
+   height: 100%;
+   width: 40%;
+   position: relative;
+}
+
+.service-image>img {
+   width: 100%;
+   height: 100%;
+   border-radius: 5px;
+}
+
+.image-icon {
+   position: absolute;
+   /* 부모 요소에 대해 절대 위치로 설정 */
+   top: 10px;
+   /* 위에서 10px 떨어진 위치 (조정 가능) */
+   right: 10px;
+   /* 오른쪽에서 10px 떨어진 위치 (조정 가능) */
+   /* background-color: #ffffff; */
+   /* 아이콘 배경색 (원하는 색상으로 변경 가능) */
+   padding: 5px;
+   /* 아이콘과 텍스트 사이의 간격 (조정 가능) */
+   border-radius: 50%;
+   /* 아이콘 모서리 둥글게 (원하는 값으로 조정 가능) */
+}
+.wishlist-information{
+  padding: 10px 10px;
+}
+#title{
+   font-weight: bold;
+}
+.wishlist-information-grade-detail{
+   color: rgba(0, 0, 0, 0.5);
+}
+.service-price-box{
+   height: 70%;
+   position: relative;
+}
+.price{
+   font-size: x-large;
+   font-weight: bold;
+   position: absolute; /* 절대 위치 설정 */
+            bottom: 0; /* 아래쪽으로 정렬 */
+            right: 0; /* 오른쪽으로 정렬 */
+            padding: 10px; /* 원하는 여백 추가 */
 }
