@@ -1,0 +1,233 @@
+/* div{
+    border: 2px solid red;
+} */
+.container {
+    margin-top: 80px;
+ }
+ 
+ .my-sales-title-font{
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.5);
+ }
+ /* .work-progress{
+    width:100%;
+    height: 100%;
+ } */
+ 
+
+ .mypage-sell-info-count-number {
+   width: 100px;
+   height: 80px;
+   border: 3px solid #3e9ce4;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .mypage-sell-info-count-number>div {
+   display: inline;
+   font-size: 2vw;
+   font-weight: 800;
+ }
+
+ .mypage-sell-info-count-line {
+   font-size: 3vw;
+   font-weight: 600;
+   color: #3e9ce4;
+ }
+
+ .mypage-sell-issue-category {
+   display: flex;
+   justify-content: space-between;
+   padding: 3%;
+   font-size: 1vw;
+ }
+    /*판매 정보*/
+
+    #mypage-sell-info-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #mypage-sell-info-title>div {
+      font-size: 1.3vw;
+    }
+
+    #mypage-sell-info-title>button {
+      background: none;
+      font-size: 1vw;
+      color: #a1a0a5;
+    }
+
+    #mypage-sell-info-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2% 10%;
+    }
+
+    #mypage-sell-info-count-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2% 8%;
+      margin-bottom: 10%;
+      font-size: 1vw;
+    }
+
+    #mypage-sell-info-count-title>div {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    #mypage-sell-issue {
+      display: flex;
+      background-color: #D2E0F4;
+      border-radius: 10px;
+    }
+
+    #mypage-sell-issue>div {
+      flex-grow: 1;
+    }
+
+
+ .my-sales-problems{
+    height: 40px;
+    display: flex;
+    padding: 0px 30px;
+    justify-content: space-between;
+    background-color: skyblue;
+    border-radius: 5px;
+ }
+ .my-sales-problems-delevery-delay{
+    display: flex;
+    width: 100%;
+    padding-right: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-sales-problems-details-solution{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .my-sales-problems-font{
+    font-size: 15px;
+    font-weight: bolder;
+ }
+ .period-setting{
+    margin-top: 30px;
+    margin-bottom: 10px;
+ }
+ #start-period-setting{
+    height: 30px;
+ }
+ #end-period-setting{
+    height: 30px;
+ }
+ .sort{
+    font-size: 13px;
+    font-weight: bold;
+ }
+ .my-sales-status{
+    padding: 5px 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border:2px solid rgba(0, 0, 0, 0.5)
+ }
+ .my-sales-status-inner-box1{
+    display: flex;
+    justify-content: space-between;
+ }
+ .status-schedule{
+    display: flex;
+ }
+ .all-status-font{
+    color: skyblue;
+    font-size: large;
+ }
+ .status-schedule-font{
+    color: skyblue;
+ }
+ .my-sales-status-inner-box2{
+    display: flex;
+ }
+ .my-sales-status-inner-service-information-inner-box{
+    display: flex;
+ }
+ .my-sales-status-inner-img{
+    height: 100px;
+    width: 150px;
+    margin-right: 20px;
+ }
+ .my-sales-status-inner-img img{
+    height: 100%;
+    width: 100%;
+ }
+ .service-name-font{
+    color: skyblue;
+    font-size: 18px
+ }
+ .service-number-font{
+    color: skyblue;
+    font-size: 18px
+ }
+ .service-price-font{
+    color: skyblue;
+ }
+ .my-sales-status-inner-service-information{
+    width: 300px;
+    border-right: 2px solid rgba(0, 0, 0, 0.2) ;
+ }
+ .expert-information-img{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+ }
+ .expert-information-img img {
+    width: 50px; /* 이미지의 크기를 설정하세요. */
+    height: 50px; /* 이미지의 크기를 설정하세요. */
+    border-radius: 50%; /* 이미지를 원형으로 만듭니다. */
+    object-fit: cover; /* 이미지가 요소에 맞게 잘릴 수 있도록 설정합니다. */
+}
+
+.expert-information-1{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.expert-nickname{
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+}
+.expert-information-2{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.my-sales-status-inner-box3{
+    background-color: beige;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.my-sales-status-inner-box3-text{
+    font-size: 12px;
+    padding: 10px 5px;
+}
+.my-sales-status-inner-box3-button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 5px;
+}
+button{
+   width: 100px;
+}
