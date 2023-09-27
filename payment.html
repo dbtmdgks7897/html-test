@@ -6,13 +6,6 @@
     <link rel="stylesheet" href="css/layout.css" />
     <title>결제하기</title>
     <style>
-      header {
-        display: none;
-      }
-      footer {
-        display: none;
-      }
-
       /* class */
 
       .payment-container {
@@ -22,6 +15,7 @@
         padding: 1%;
         overflow-y: scroll;
         -ms-overflow-style: none;
+        margin-top: 8%;
       }
 
       .payment-container::-webkit-scrollbar {
@@ -128,6 +122,7 @@
       }
       #payment-order-title > span {
         font-weight: 600;
+        font-size: 1.2vw;
       }
       #payment-company {
         display: flex;
@@ -258,11 +253,16 @@
         padding-top: 2%;
       }
 
+      #payment-request-textbox > textarea::placeholder {
+        color: #9d9d9d;
+        padding-left: 2%;     
+      }
+
       /*총 결제금액*/
       #payment-total {
         border: 1px solid #d9d9d9;
         padding: 1%;
-        margin-bottom: 5%;
+        margin-bottom: 20%;
       }
       #payment-total-money-last {
         font-size: 1.8vw;
@@ -278,35 +278,68 @@
 
       /*결제 동의 & 결제하기 버튼 */
       #payment-agree-paybtn {
-        position:relative;
-        width: 120%;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 8%;
+      }
+      #payment-agree-paybtn > div {
+        width: 100%;
         max-width: 768px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 3px 3px 3px #f1f1f1 inset;
+        box-shadow: 1px 1px 5px 1px #d9d9d9 inset;
         background-color: white;
-        right: 6.6%;
       }
-      #payment-agree-paybtn > span{
-        padding: 5%;
-        color: #9d9d9d;
+      #payment-agree-paybtn > div > span {
+        color: #adadad;
         font-size: 1vw;
+        margin: 0 0 0 5%;
       }
 
-      #payment-agree-paybtn > button {
+      #payment-agree-paybtn > div > button {
         margin: 0 5% 0 0;
-        width: 30%;
+        width: 25%;
         border-radius: 15px;
         font-size: 1.5vw;
         color: white;
-        background-color: #3E9CED;
+        background-color: #3e9ced;
       }
     </style>
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <div class="search">
+        <input
+          type="text"
+          placeholder="검색어를 입력해주세요"
+          class="search-field"
+        />
+        <button type="button" class="search-button">
+          <img src="https://via.placeholder.com/30" alt="" />
+        </button>
+      </div>
+      <div class="user-infor">
+        <div>
+          <img src="https://via.placeholder.com/40" alt="" />
+        </div>
+        <div class="nickname">닉네임</div>
+      </div>
+      <div class="alarm">
+        <div class="alarm-image">
+          <img src="https://via.placeholder.com/30x50" alt="" />
+        </div>
+        <div class="alarm-state-image">
+          <img src="https://via.placeholder.com/10" alt="" />
+        </div>
+      </div>
+    </header>
     <div class="container">
       <!-- 결제 전체 컨테이너 -->
       <div class="payment-container">
@@ -501,7 +534,7 @@
         <div>
           <div class="payment-category-title">
             <div id="payment-request-textbox">
-              <textarea> 요청사항을 작성해주세요 </textarea>
+              <textarea placeholder="요청사항을 작성해주세요"></textarea>
             </div>
           </div>
         </div>
@@ -542,12 +575,14 @@
       </div>
       <!-- 결제 동의 & 결제하기 버튼-->
       <div id="payment-agree-paybtn">
-        <span>위 내용을 확인했고 결제 내용에 동의합니다.</span>
-        <button type="button">결제하기</button>
+        <div>
+          <span>위 내용을 확인했고 결제 내용에 동의합니다.</span>
+          <button type="button">결제하기</button>
+        </div>
       </div>
     </div>
     <!-- container -->
 
-    <footer ></footer>
+    <footer></footer>
   </body>
 </html>
