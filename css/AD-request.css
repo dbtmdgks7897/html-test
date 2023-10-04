@@ -1,0 +1,100 @@
+#ad-request-setting{
+    padding: 30px 50px
+    
+}
+
+.advertisement-application{
+    margin-left: 20px;
+    font-size: 30px;
+    color: black;
+    font-weight:500 ;
+}
+hr{
+    border-color: 2px solid rgba(0, 0, 0, 0.2) ;
+}
+.ad-type{
+    margin-top: 20px; 
+    font-size: 20px;
+    color: black;
+    font-weight:500 ;
+}
+.ad-type-inner-box{
+    display: grid;
+    grid-template-columns: 2fr 8fr 1fr; /* 각 열의 크기를 지정 */
+    gap: 80px; /* 아이템 간의 간격 설정 (선택사항) */
+    height: 50px;
+    border: 2px solid skyblue;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.ad-type-inner-box-details1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ad-type-inner-box-details2{
+    display: flex;
+    
+    align-items: center;
+    color: rgba(0, 0, 0, 0.5) ;
+}
+.ad-type-inner-box-details3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vacation-setting-inner-box{
+    padding: 0px 50px;
+}
+
+.service-select{
+    margin-top: 20px; 
+    font-size: 20px;
+    color: black;
+    font-weight:500 ;
+}
+#service-select{
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px; /* 글자 크기 설정 */
+    color: rgba(0, 0, 0, 0.5) ; /* 글자 색상 설정 (예: 빨간색) */
+    border-radius: 5px;
+}
+.ad-period-setting{
+    margin-top: 20px; 
+    font-size: 20px;
+    color: black;
+    font-weight:500 ;
+}
+#ad-period-setting-select{
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px; /* 글자 크기 설정 */
+    color: rgba(0, 0, 0, 0.5) ; /* 글자 색상 설정 (예: 빨간색) */
+    border-radius: 5px;
+}
+.ad-payment{
+    margin-top: 20px; 
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight:500 ;
+}
+.pay-payment{
+    margin-top:5px;
+    color: rgba(0, 0, 0, 0.7) ;
+}
+.ad-detail-warning{
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.5) ;
+    font-size: 3px;
+}
+button{
+    margin-top: 100px;
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5) ;
+}
