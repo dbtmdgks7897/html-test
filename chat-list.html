@@ -1,243 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/layout.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/layout.css" />
     <title>채팅 리스트</title>
     <style>
-        /* class */
-        .blue {
-            color: #0089EC;
-        }
+      /* class */
+      .blue {
+        color: #0089ec;
+      }
 
-        .container {
-            margin-top: 80px;
-            border-radius: 20px;
-        }
+      .container {
+        margin-top: 80px;
+        border-radius: 20px;
+      }
 
-        .answer-status {
-            border: 1px solid rgb(179, 179, 179);
-            padding: 20px 30px;
-            border-radius: 7px;
-        }
+      .answer-status {
+        border: 1px solid rgb(179, 179, 179);
+        padding: 20px 30px;
+        border-radius: 7px;
+      }
 
-        .answer-status>h3 {
-            color: rgb(179, 179, 179);
-        }
+      .answer-status > h3 {
+        color: rgb(179, 179, 179);
+      }
 
-        .answer-status-box {
-            width: 70%;
-            background: rgb(235, 235, 235);
-            margin: auto;
-            padding: 5px;
-            display: flex;
-            border-radius: 30px;
-        }
+      .answer-status-box {
+        width: 70%;
+        background: rgb(235, 235, 235);
+        margin: auto;
+        padding: 5px;
+        display: flex;
+        border-radius: 30px;
+        margin-top: 20px;
+      }
 
-        .answer-status-box>div {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      .answer-status-box > div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .chat-list-body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      .chat-list-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .chat-search {
-            background-color: rgb(235, 235, 235);
-            width: 80%;
-        }
+      .chat-search {
+        background-color: rgb(235, 235, 235);
+        width: 80%;
+      }
 
-        .chat-search>input {
-            background-color: rgb(235, 235, 235) !important;
-        }
+      .chat-search > input {
+        background-color: rgb(235, 235, 235) !important;
+      }
 
-        .chat-search>button {
-            background-color: rgb(235, 235, 235) !important;
-        }
+      .chat-search > button {
+        background-color: rgb(235, 235, 235) !important;
+      }
 
-        .chat-item {
-            display: flex;
-            width: 100%;
-            height: 100px;
-            border-radius: 50px;
-            background-color: #008aec1c;
-            padding: 0px 5%;
-        }
-        .chat-item-image > img {
-            border-radius: 100%;
-        }
-        .chat-item-rows{
-            width: 100%;
-        }
-        .chat-item-row-1{
-            display: flex;
-            justify-content: space-between;
-        }
-        .chat-item-row-2{
-            display: flex;
-            justify-content: space-between;
-        }
+      .chat-item {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        border-radius: 50px;
+        background-color: #008aec1c;
+        padding: 0px 5%;
+        align-items: center;
+      }
+      .chat-item-image > img {
+        border-radius: 100%;
+      }
+      .chat-item-rows {
+        width: 100%;
+      }
+      .chat-item-row-1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .chat-item-row-2 {
+        display: flex;
+        justify-content: space-between;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="search">
-            <input type="text" placeholder="검색어를 입력해주세요" class="search-field">
-            <button type="button" class="search-button">
-                <img src="https://via.placeholder.com/30" alt="">
-            </button>
+      <div class="search">
+        <input
+          type="text"
+          placeholder="검색어를 입력해주세요"
+          class="search-field"
+        />
+        <button type="button" class="search-button">
+          <img src="https://via.placeholder.com/30" alt="" />
+        </button>
+      </div>
+      <div class="user-infor">
+        <div>
+          <img src="https://via.placeholder.com/40" alt="" />
         </div>
-        <div class="user-infor">
-            <div>
-                <img src="https://via.placeholder.com/40" alt="">
-            </div>
-            <div class="nickname">닉네임</div>
+        <div class="nickname">닉네임</div>
+      </div>
+      <div class="alarm">
+        <div class="alarm-image">
+          <img src="https://via.placeholder.com/30x50" alt="" />
         </div>
-        <div class="alarm">
-            <div class="alarm-image">
-                <img src="https://via.placeholder.com/30x50" alt="">
-            </div>
-            <div class="alarm-state-image">
-                <img src="https://via.placeholder.com/10" alt="">
-            </div>
+        <div class="alarm-state-image">
+          <img src="https://via.placeholder.com/10" alt="" />
         </div>
+      </div>
     </header>
     <div class="container">
-        <!-- 헤더 (타이틀, 메세지 응답 현황) -->
-        <div class="chat-list-header">
-
-            <!-- 타이틀 -->
-            <div class="title">
-                <h2>전체 메시지</h2>
-            </div>
-
-            <!-- 메세지 응답 현황 전체 div -->
-            <div class="answer-status">
-                <h3>메시지 응답 현황</h3>
-
-                <!-- 내부 박스 -->
-                <div class="answer-status-box">
-
-                    <!-- 메시지 응답률 박스 -->
-                    <!-- 이 DIV에만 오른쪽 실선 적용되서 style 직접 적용시켰습니다. -->
-                    <div class="answer-status-rating" style="border-right: 1px solid rgb(179, 179, 179);">
-                        <span class="blue">{96%}</span>
-                        <span>메시지 응답률</span>
-                    </div>
-
-                    <!-- 평균 응답시간 박스 -->
-                    <div class="answer-status-time">
-                        <span class="blue">{10분 이내}</span>
-                        <span>평균 응답 시간</span>
-                    </div>
-                </div>
-            </div>
+      <!-- 헤더 (타이틀, 메세지 응답 현황) -->
+      <div class="chat-list-header">
+        <!-- 타이틀 -->
+        <div class="title">
+          <span>메시지</span>
         </div>
 
-        <!-- 바디 (검색창, 채팅창 리스트) -->
-        <div class="chat-list-body">
-            <!-- 채팅창 검색창 -->
-            <div class="search chat-search">
-                <input type="text" placeholder="" class="search-field">
-                <button type="button" class="search-button">
-                    <img src="https://via.placeholder.com/30" alt="">
-                </button>
+        <!-- 메세지 응답 현황 전체 div -->
+        <div class="answer-status">
+          <h3>메시지 응답 현황</h3>
+
+          <!-- 내부 박스 -->
+          <div class="answer-status-box">
+            <!-- 메시지 응답률 박스 -->
+            <!-- 이 DIV에만 오른쪽 실선 적용되서 style 직접 적용시켰습니다. -->
+            <div
+              class="answer-status-rating"
+              style="border-right: 1px solid rgb(179, 179, 179)"
+            >
+              <span class="blue">{96%}</span>
+              <span>메시지 응답률</span>
             </div>
 
-            <!-- 채팅창 -->
-            <div class="chat-item">
-                <!-- 이미지 -->
-                <div class="chat-item-image">
-                    <img src="http://via.placeholder.com/100" alt="" width="70px">
-                </div>
-                <!-- 채팅창 정보 -->
-                <div class="chat-item-rows">
-                    <!-- 첫번째 줄 -->
-                    <div class="chat-item-row-1">
-                        <div>
-                            <span>{의뢰자 닉네임}</span>
-                            <span>거래 상태</span>
-                        </div>
-                        <div>
-                            <span>{접속 시간}</span>
-                        </div>
-                    </div>
-                    <!-- 두번째 줄 -->
-                    <div class="chat-item-row-2">
-                        <div>
-                            <span>{메시지 내용}</span>
-                        </div>
-                        <div>
-                            <span>{아이콘}</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- 평균 응답시간 박스 -->
+            <div class="answer-status-time">
+              <span class="blue">{10분 이내}</span>
+              <span>평균 응답 시간</span>
             </div>
+          </div>
+        </div>
+      </div>
 
-
-
-            <!-- 아래쪽은 더미 -->
-            <div class="chat-item">
-                <div class="chat-item-image">
-                    <img src="http://via.placeholder.com/100" alt="" width="70px">
-                </div>
-                <div class="chat-item-rows">
-                    <div class="chat-item-row-1">
-                        <div>
-                            <span>{의뢰자 닉네임}</span>
-                            <span>거래 상태</span>
-                        </div>
-                        <div>
-                            <span>{접속 시간}</span>
-                        </div>
-                    </div>
-                    <div class="chat-item-row-2">
-                        <div>
-                            <span>{메시지 내용}</span>
-                        </div>
-                        <div>
-                            <span>{아이콘}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="chat-item">
-                <div class="chat-item-image">
-                    <!-- 70px 사이즈 이미지가 없어 100px로 가져오고 70px로 줄였습니다. -->
-                    <img src="http://via.placeholder.com/100" alt="" width="70px">
-                </div>
-                <div class="chat-item-rows">
-                    <div class="chat-item-row-1">
-                        <div>
-                            <span>{의뢰자 닉네임}</span>
-                            <span>거래 상태</span>
-                        </div>
-                        <div>
-                            <span>{접속 시간}</span>
-                        </div>
-                    </div>
-                    <div class="chat-item-row-2">
-                        <div>
-                            <span>{메시지 내용}</span>
-                        </div>
-                        <div>
-                            <span>{아이콘}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- 바디 (검색창, 채팅창 리스트) -->
+      <div class="chat-list-body">
+        <!-- 채팅창 검색창 -->
+        <div class="search chat-search">
+          <input type="text" placeholder="" class="search-field" />
+          <button type="button" class="search-button">
+            <img src="https://via.placeholder.com/30" alt="" />
+          </button>
         </div>
 
+        <!-- 채팅창 -->
+        <div class="chat-item">
+          <!-- 이미지 -->
+          <div class="chat-item-image">
+            <img src="http://via.placeholder.com/100" alt="" width="70px" />
+          </div>
+          <!-- 채팅창 정보 -->
+          <div class="chat-item-rows">
+            <!-- 첫번째 줄 -->
+            <div class="chat-item-row-1">
+              <div>
+                <span>{의뢰자 닉네임}</span>
+                <span>거래 상태</span>
+              </div>
+              <div>
+                <span>{접속 시간}</span>
+              </div>
+            </div>
+            <!-- 두번째 줄 -->
+            <div class="chat-item-row-2">
+              <div>
+                <span>{메시지 내용}</span>
+              </div>
+              <div>
+                <span>{아이콘}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 아래쪽은 더미 -->
+        <div class="chat-item">
+          <div class="chat-item-image">
+            <img src="http://via.placeholder.com/100" alt="" width="70px" />
+          </div>
+          <div class="chat-item-rows">
+            <div class="chat-item-row-1">
+              <div>
+                <span>{의뢰자 닉네임}</span>
+                <span>거래 상태</span>
+              </div>
+              <div>
+                <span>{접속 시간}</span>
+              </div>
+            </div>
+            <div class="chat-item-row-2">
+              <div>
+                <span>{메시지 내용}</span>
+              </div>
+              <div>
+                <span>{아이콘}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-item">
+          <div class="chat-item-image">
+            <!-- 70px 사이즈 이미지가 없어 100px로 가져오고 70px로 줄였습니다. -->
+            <img src="http://via.placeholder.com/100" alt="" width="70px" />
+          </div>
+          <div class="chat-item-rows">
+            <div class="chat-item-row-1">
+              <div>
+                <span>{의뢰자 닉네임}</span>
+                <span>거래 상태</span>
+              </div>
+              <div>
+                <span>{접속 시간}</span>
+              </div>
+            </div>
+            <div class="chat-item-row-2">
+              <div>
+                <span>{메시지 내용}</span>
+              </div>
+              <div>
+                <span>{아이콘}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <footer></footer>
-</body>
-
+  </body>
 </html>
