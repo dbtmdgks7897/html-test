@@ -1,629 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/layout.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/detail.css" />
     <title>상세페이지</title>
-    <style>
-        .container {
-            height: auto;
-            padding: 0;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            margin-top: 75px;
-        }
-
-        /* 맨위 미리보기? */
-        .preview-container {
-            height: 300px;
-            z-index: 0;
-            position: relative; /* 상대 위치 지정 */
-        }
-        .preview-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-        }
-
-
-        /* 미리보기를 뺀 나머지 컨테이너 */
-        .content-container {
-            background-color: white;
-            margin-top: -20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            flex-grow: 1;
-            padding: 5px 45px;
-            z-index: 0;
-            position: relative; /* 상대 위치 지정 */
-        }
-        /* 내용 컨테이너 */
-        .content-detail_container {
-            border: 1px solid #E0E0E0;
-            border-radius: 20px;
-            margin-bottom: 20px;
-        }
-        /* 내용 컨테이너 - 타이틀*/
-        .content-detail_container-title {
-            background-color: #EDEDED;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            padding: 15px 20px;
-        }
-
-
-        /* 카테고리, 레벨+하트, 제목 */
-        .title-container {
-            /*border: 1px solid aquamarine;*/
-            margin: 20px 3% 10px 3%;
-        }
-        .title-1-category {
-            margin-bottom: 5px;
-        }
-        .title-2 {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-        }
-        .title-2-level {
-            background-color: #D9D9D9;
-            color: #949494;
-            padding: 4px 5px;
-            line-height: 1; /* 텍스트의 위아래 간격을 동일하게 설정 */
-        }
-        .title-2-heart{
-            display: flex;
-        }
-
-        /* 타입 전체 컨테이너 */
-        .option-container {
-            border: 1px solid #E0E0E0;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            margin-bottom: 15px;
-        }
-        /* 타입 3개 고르기 */
-        .option-type-container {
-            display: flex;
-            justify-content: space-evenly;
-        }
-        .option-type-1{
-            font-weight: bold;
-            border-top: 5px solid #3E9CED;
-        }
-        .option-type-2, .option-type-3 {
-            border-top: 3px solid #E0E0E0;
-        }
-        .option-type-1, .option-type-2, .option-type-3 {
-            font-size: 20px;
-            width: 33.3%;
-            text-align: center;
-            padding: 15px 0;
-            cursor: pointer;
-        }
-
-        /* 타입 상세옵션 */
-        .option-detail-container {
-            border-top: 2px solid #E0E0E0;
-            padding: 15px 30px;
-        }
-
-        /* 가격 */
-        .option-detail-price {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: baseline;
-        }
-        .option-detail-price-1{
-            font-weight: bold;
-            font-size: 25px;
-        }
-        .option-detail-price-2{
-            color: #A2A2A2;
-            font-weight: normal;
-            font-size: 15px;
-            vertical-align: baseline; /* 텍스트를 기준선에 맞춤 */
-        }
-
-        /* 소개글? */
-       
-        .option-detail-condition-1 {
-            margin-bottom: 7px;
-            font-weight: bold;
-        }
-        .option-detail-condition-2 {
-            color: #A2A2A2;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        /* 상세옵션 고르기 */
-
-
-        /* 상세옵션 고르기 단일 */
-        .option-detail-check {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 7px;
-        }
-        .option-detail-check img {
-            width: 25px;
-            height: auto;
-        }
-
-        /* 구매 버튼 | 가격 비교하러 가기 버튼 */
-        .payment-button {
-            width: 100%;
-            height: 60px;
-            border-radius: 10px;
-            background-color: #56A7E8;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .compare_price-button {
-            width: 100%;
-            height: 60px;
-            border-radius: 10px;
-            border: 2px solid #56A7E8;
-            background-color: white;
-            color: #686868;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-
-        /* 전문가 소개 */
-        .profile-container{
-            position: relative; /* 부모 요소를 relative로 설정 */
-
-        }
-        .profile-image {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            box-shadow:
-                    0 0 0 3px white, /* 내부 테두리 (두께 조절 가능) */
-                    0 0 0 4px #d9d9d9; /* 외부 테두리 (두께 조절 가능) */
-            position: absolute; /* 이미지를 절대 위치로 설정 */
-            top: 20px; /* 원하는 수직 위치 설정 */
-            right: 20px; /* 원하는 수평 위치 설정 */
-            z-index: 1; /* 이미지를 텍스트 아래로 배치 */
-        }
-        /* 전문가 소개 타이틀 */
-        .profile-title-1{
-            display: flex;
-        }
-        .profile-title-1 div {
-            background-color: #D9D9D9;
-            color: #949494;
-            padding: 5px 8px;
-            line-height: 1; /* 텍스트의 위아래 간격을 동일하게 설정 */
-            margin-bottom: 10px;
-        }
-        .profile-title-2 {
-            font-size: 20px;
-        }
-        /* 전문가 소개 내용 */
-        .profile-content {
-            padding: 20px;
-
-        /*    TODO 임시 길이 */
-            height: 300px;
-        }
-
-        .profile-content-status{
-            background-color: #E0E0E0;
-            border-radius: 15px;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 70px;
-            margin-top: 20px;
-        }
-        .profile-content-status-detail{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .profile-content-status-detail span{
-            font-size: 20px;
-        }
-        .profile-content-status-detail p{
-            font-size: 15px;
-            color: #5e5e67;
-        }
-        .profile-content-request-button {
-            width: 100%;
-            height: 60px;
-            border-radius: 15px;
-            background-color: white;
-            border: 1px solid #9d9d9d;
-        }
-
-
-        /* 글 내용 (서비스 설명) */
-        
-        /* 서비스 설명 타이틀*/
-       
-        .service-title p {
-            color: #898989;
-            font-size: 20px;
-            margin-top: 0;
-        }
-        /* 서비스 설명 내용 */
-        .service-content-container {
-            text-align: center;
-        }
-
-        .service-content img {
-            max-width: 100%;
-            height: auto;
-        }
-        /* 더보기 버튼 */
-        .more-button {
-            width: 80%;
-            height: 40px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            border: 1px solid #B2B2B2;
-            background-color: white;
-            font-size: 13px;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        /* 리뷰 */
-    
-        /* 리뷰 타이틀 */
-        .review-title {
-            color: #898989;
-            font-size: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .review-title-rating{
-            display: flex;
-            background-color: white;
-            border-radius: 10px;
-            padding: 5px;
-            align-items: center;
-        }
-        .review-title-rating-score {
-            font-weight: bold;
-        }
-        .review-title-rating-star img{
-            width: 15px; /* 별 이미지의 너비 조정 */
-            height: 15px; /* 별 이미지의 높이 조정 */
-            margin-right: 2px; /* 각 별 이미지 사이에 오른쪽 여백 추가 */
-        }
-        .review-title-rating-count {
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .review-content {
-            padding: 20px;
-        }
-
-        .review-content-photo_review-text, .review-content-all_review-text {
-            font-size: 20px;
-        }
-
-        
-        .review-content-photo_review-text{
-            margin-bottom: 15px;
-        }
-        .review-content-photo_review-img{
-            margin-bottom: 25px;
-        }
-
-        .review-content-all_review-content-detail {
-            display: flex;
-        }
-        .review-content-all_review-content-detail-user_review{
-            font-size: 14px;
-        }
-
-        .review-content-all_review-content-detail-user_profile img{
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        .review-content-all_review-reply{
-            padding-left: 40px;
-            display: flex;
-        }
-        .review-content-all_review-reply-arrow img{
-            width: 30px;
-        }
-        .review-content-all_review-reply-username{
-            margin-bottom: 10px;
-        }
-        .review-content-all_review-reply-detail{
-            color: #737373;
-        }
-        .review-content-all_review-reply-content {
-            background-color: #EAEAEA;
-            border-radius: 20px;
-            padding: 10px 20px;
-        }
-        .review-content-all_review-reply-content p{
-            font-size: 13px;
-        }
-
-
-
-        /* id */
-        /*결제 동의 & 결제하기 버튼 */
-        .payment-agree-paybtn {
-            width: 100%;
-            height: 10%;
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 5%;
-        }
-
-        .payment-agree-paybtn>div {
-            width: 100%;
-            max-width: 768px;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 1px 1px 5px 1px #d9d9d9 inset;
-            background-color: white;
-        }
-
-        .payment-agree-paybtn>div>div {
-            display: flex;
-        }
-        .payment-agree-paybtn>div>div>button {
-            border-radius: 15px;
-            font-size: 1vw;
-            color: white;
-            background-color: #3e9ced;
-            padding: 5px;
-        }
-
-        .payment-agree-paybtn>div>div>img {
-         width: 4vw;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="search">
-        <input type="text" placeholder="검색어를 입력해주세요" class="search-field">
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <input
+          type="text"
+          placeholder="검색어를 입력해주세요"
+          class="search-field"
+        />
         <button type="button" class="search-button">
-            <img src="https://via.placeholder.com/30" alt="">
+          <img src="https://via.placeholder.com/30" alt="" />
         </button>
-    </div>
-    <div class="user-infor">
+      </div>
+      <div class="user-infor">
         <div>
-            <img src="https://via.placeholder.com/40" alt="">
+          <img src="https://via.placeholder.com/40" alt="" />
         </div>
         <div class="nickname">닉네임</div>
-    </div>
-    <div class="alarm">
+      </div>
+      <div class="alarm">
         <div class="alarm-image">
-            <img src="https://via.placeholder.com/30x50" alt="">
+          <img src="https://via.placeholder.com/30x50" alt="" />
         </div>
         <div class="alarm-state-image">
-            <img src="https://via.placeholder.com/10" alt="">
+          <img src="https://via.placeholder.com/10" alt="" />
         </div>
-    </div>
-</header>
+      </div>
+    </header>
 
-
-
-<div class="container">
-    <div class="preview-container">
-        <img src="img/detail/detail-preview.png" alt="미리보기 사진">
-    </div>
-    <div class="content-container">
-
+    <div class="container">
+      <div class="preview-container">
+        <img src="img/detail/detail-preview.png" alt="미리보기 사진" />
+      </div>
+      <div class="content-container">
         <div class="title-container">
-            <div class="title-1-category">{사진} > {AI그림}</div>
-            <div class="title-2">
-                <div class="title-2-level">LEVEL {3}</div>
-                <div class="title-2-heart">
-                    <div class="title-2-heart-img">
-                        <img src="img/heart.png" alt="하트 이미지">
-                    </div>
-                    <div class="title-2-heart-count">
-                        &nbsp;{12,345}
-                    </div>
-                </div>
+          <div class="title-1-category">{사진} > {AI그림}</div>
+          <div class="title-2">
+            <div class="title-2-level">LEVEL {3}</div>
+            <div class="title-2-heart">
+              <div class="title-2-heart-img">
+                <img src="img/heart.png" alt="하트 이미지" />
+              </div>
+              <div class="title-2-heart-count">&nbsp;{12,345}</div>
             </div>
-            <div class="title-3-title">{올빼미 사진관}</div>
+          </div>
+          <div class="title-3-title">{올빼미 사진관}</div>
         </div>
 
         <div class="option-container">
-            <div class="option-type-container">
-                <div class="option-type-1">BASIC</div>
-                <div class="option-type-2">SPECIAL</div>
-                <div class="option-type-3">PREMIUM</div>
+          <div class="option-type-container">
+            <div class="option-type-1">BASIC</div>
+            <div class="option-type-2">SPECIAL</div>
+            <div class="option-type-3">PREMIUM</div>
+          </div>
+          <div class="option-detail-container">
+            <div class="option-detail-price">
+              <p class="option-detail-price-1">{149,000}원</p>
+              <p class="option-detail-price-2">(VAT포함)</p>
             </div>
-            <div class="option-detail-container">
-                <div class="option-detail-price">
-                    <p class="option-detail-price-1">{149,000}원</p>
-                    <p class="option-detail-price-2">(VAT포함)</p>
-                </div>
-                <div class="option-detail-condition">
-                    <p class="option-detail-condition-1">{4년 차 대기업경력 디자이너 2인참여}</p>
-                    <p class="option-detail-condition-2">{대기업경력 디자이너 2인참여 | 3일이내 제작 | 팀장님 참여 브랜딩회의 | 모든유형로고 원본파일제공}</p>
-                </div>
-                <div class="option-detail-check-container">
-                    <div class="option-detail-check">
-                        <p>{원본파일 제공}</p>
-                        <img src="img/detail/check.png" alt="체크박스">
-                    </div>
-                    <div class="option-detail-check">
-                        <p>{고해상도 파일 제공}</p>
-                        <img src="img/detail/check.png" alt="체크박스">
-                    </div>
-                    <div class="option-detail-check">
-                        <p>{응용디자인}</p>
-                        <img src="img/detail/check.png" alt="체크박스">
-                    </div>
-                    <div class="option-detail-check">
-                        <p>{상표 등록 가능여부}</p>
-                        <img src="img/detail/check.png" alt="체크박스">
-                    </div>
-                    <div class="option-detail-check">
-                        <p>{시안개수}</p>
-                        <p>{1개}</p>
-                    </div>
-                </div>
-                <button class="payment-button">
-                    <span> 구매하기 </span>
-                </button>
-                <button class="compare_price-button">
-                    <span> 가격 비교하러 가기 </span>
-                </button>
-                <div class="option-detail-compare_price"></div>
+            <div class="option-detail-condition">
+              <p class="option-detail-condition-1">
+                {4년 차 대기업경력 디자이너 2인참여}
+              </p>
+              <p class="option-detail-condition-2">
+                {대기업경력 디자이너 2인참여 | 3일이내 제작 | 팀장님 참여
+                브랜딩회의 | 모든유형로고 원본파일제공}
+              </p>
             </div>
+            <div class="option-detail-check-container">
+              <div class="option-detail-check">
+                <p>{원본파일 제공}</p>
+                <img src="img/detail/check.png" alt="체크박스" />
+              </div>
+              <div class="option-detail-check">
+                <p>{고해상도 파일 제공}</p>
+                <img src="img/detail/check.png" alt="체크박스" />
+              </div>
+              <div class="option-detail-check">
+                <p>{응용디자인}</p>
+                <img src="img/detail/check.png" alt="체크박스" />
+              </div>
+              <div class="option-detail-check">
+                <p>{상표 등록 가능여부}</p>
+                <img src="img/detail/check.png" alt="체크박스" />
+              </div>
+              <div class="option-detail-check">
+                <p>{시안개수}</p>
+                <p>{1개}</p>
+              </div>
+            </div>
+            <button class="payment-button">
+              <span> 구매하기 </span>
+            </button>
+            <button class="compare_price-button">
+              <span> 가격 비교하러 가기 </span>
+            </button>
+            <div class="option-detail-compare_price"></div>
+          </div>
         </div>
 
         <div class="content-detail_container profile-container">
-            <img src="img/detail/detail-preview.png" alt="프로필 이미지" class="profile-image">
-            <div class="content-detail_container-title profile-title">
-                <div class="profile-title-1">
-                    <div>LEVEL {3}</div>
-                </div>
-                <div class="profile-title-2">{올빼미 사진관}</div>
+          <img
+            src="img/detail/detail-preview.png"
+            alt="프로필 이미지"
+            class="profile-image"
+          />
+          <div class="content-detail_container-title profile-title">
+            <div class="profile-title-1">
+              <div>LEVEL {3}</div>
             </div>
-            <div class="profile-content">
-                <div>연락가능 시간대 : {언제나 가능}</div>
-                <div>평균 응답 시간 : {30분 이내}</div>
-                <div class="profile-content-status">
-                    <div class="profile-content-status-detail">
-                        <span>{12,854} 건</span>
-                        <p>만족도</p>
-                    </div>
-                    <div class="profile-content-status-detail">
-                        <span>{98}%</span>
-                        <p>회원구분</p>
-                    </div>
-                    <div class="profile-content-status-detail">
-                        <span>{기업회원}</span>
-                        <p>거래수</p>
-                    </div>
-                </div>
-                <button class="profile-content-request-button">
-                    <span> 문의하기 </span>
-                </button>
+            <div class="profile-title-2">{올빼미 사진관}</div>
+          </div>
+          <div class="profile-content">
+            <div>연락가능 시간대 : {언제나 가능}</div>
+            <div>평균 응답 시간 : {30분 이내}</div>
+            <div class="profile-content-status">
+              <div class="profile-content-status-detail">
+                <span>{12,854} 건</span>
+                <p>만족도</p>
+              </div>
+              <div class="profile-content-status-detail">
+                <span>{98}%</span>
+                <p>회원구분</p>
+              </div>
+              <div class="profile-content-status-detail">
+                <span>{기업회원}</span>
+                <p>거래수</p>
+              </div>
             </div>
+            <button class="profile-content-request-button">
+              <span> 문의하기 </span>
+            </button>
+          </div>
         </div>
 
-        <div class="content-detail_container service-container ">
-            <div class="content-detail_container-title service-title">
-                <p>서비스 설명</p>
+        <div class="content-detail_container service-container">
+          <div class="content-detail_container-title service-title">
+            <p>서비스 설명</p>
+          </div>
+          <div class="service-content-container">
+            <div class="service-content">
+              <p>눈이 큰 올빼미 사진 전문업체입니다</p>
+              <img src="img/detail/detail-service.png" alt="서비스 내용 사진" />
+              <p style="font-size: 13px">
+                *작품의 대한 권리는 의뢰자가 가져가며,<br />
+                창작자는 판매 완료 포트폴리오에 대한 사용을 <br />
+                제외한 모든 권리를 양도 합니다.
+              </p>
             </div>
-            <div class="service-content-container">
-                <div class="service-content">
-                    <p>눈이 큰 올빼미 사진 전문업체입니다</p>
-                    <img src="img/detail/detail-service.png" alt="서비스 내용 사진">
-                    <p style="font-size: 13px">
-                        *작품의 대한 권리는 의뢰자가 가져가며,<br>
-                        창작자는 판매 완료 포트폴리오에 대한 사용을 <br>
-                        제외한 모든 권리를 양도 합니다.
-                    </p>
-                </div>
-                <button class="more-button"> 더보기 </button>
-            </div>
+            <button class="more-button">더보기</button>
+          </div>
         </div>
 
-        <div class="content-detail_container review-container ">
-            <div class="content-detail_container-title review-title">
-                <div class="review-title-text">리뷰</div>
-                <div class="review-title-rating">
-                    <div class="review-title-rating-score">{5.0}&nbsp;</div>
-                    <div class="review-title-rating-star">
-                        <img src="img/star.png" alt="리뷰 별">
-                        <img src="img/star.png" alt="리뷰 별">
-                        <img src="img/star.png" alt="리뷰 별">
-                        <img src="img/star.png" alt="리뷰 별">
-                        <img src="img/star.png" alt="리뷰 별">
-                    </div>
-                    <div class="review-title-rating-count"> ({42})건</div>
-                </div>
+        <div class="content-detail_container review-container">
+          <div class="content-detail_container-title review-title">
+            <div class="review-title-text">리뷰</div>
+            <div class="review-title-rating">
+              <div class="review-title-rating-score">{5.0}&nbsp;</div>
+              <div class="review-title-rating-star">
+                <img src="img/star.png" alt="리뷰 별" />
+                <img src="img/star.png" alt="리뷰 별" />
+                <img src="img/star.png" alt="리뷰 별" />
+                <img src="img/star.png" alt="리뷰 별" />
+                <img src="img/star.png" alt="리뷰 별" />
+              </div>
+              <div class="review-title-rating-count">({42})건</div>
             </div>
-            <div class="review-content">
-                <div class="review-content-photo_review">
-                    <div class="review-content-photo_review-text">포토리뷰 {12,345}건</div>
-                    <div class="review-content-photo_review-img"> < 사진 사진 사진 사진 사진 > </div>
-                </div>
-                <div class="review-content-all_review">
-                    <div class="review-content-all_review-text">전체리뷰 {12,345,678}건</div>
-                    <div class="review-content-all_review-content">
-                        <div class="review-content-all_review-content-detail">
-                            <div class="review-content-all_review-content-detail-user_profile">
-                                <img src="img/detail/detail-service.png" alt="리뷰 프로필사진">
-                            </div>
-                            <div class="review-content-all_review-content-detail-user_review">
-                                <div>
-                                    <div>{올빼미가 좋은 토끼} | {23.09.18}</div>
-                                </div>
-                                <div>{5.0} 별 별 별 별 별</div>
-                                <div>작업일 : {0}일 | 주문 금액 : {xx}원</div>
-                                <div>올빼미 그림 너무 귀엽고 예뻐요! 작업속도도 빠르고 만족도도 높습니다. 무엇보다 대표님 짱 친절! 기분좋은 구매였습니다.</div>
-                            </div>
-                        </div>
-                        <div class="review-content-all_review-reply">
-                            <div class="review-content-all_review-reply-arrow">
-                                <img src="img/detail/detail-review-arrow.png">
-                            </div>
-                            <div class="review-content-all_review-reply-content">
-                                <div class="review-content-all_review-reply-username">{올빼미 사진관} | {23.09.25}</div>
-                                <div class="review-content-all_review-reply-detail">
-                                    <p>
-                                        안녕하세요 대표님!<br>
-                                        소중한 후기 작성해주셔서 감사드립니다:)<br>
-                                        제작하신 로고 디자인이 고객님의 비즈니스에 도움이 되기를 바라며,<br>
-                                        더 나은 브랜드 아이덴티티를 위해 계속 노력하는 올빼미 사진관이 되겠습니다.<br>
-                                        <br>
-                                        * 2023년 로고 브랜드 소비자 만족도 1위 대상<br>
-                                        * 대기업경력 디자이너의 브랜딩회의 서비스
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+          </div>
+          <div class="review-content">
+            <div class="review-content-photo_review">
+              <div class="review-content-photo_review-text">
+                포토리뷰 {12,345}건
+              </div>
+              <div class="review-content-photo_review-img">
+                < 사진 사진 사진 사진 사진 >
+              </div>
             </div>
+            <div class="review-content-all_review">
+              <div class="review-content-all_review-text">
+                전체리뷰 {12,345,678}건
+              </div>
+              <div class="review-content-all_review-content">
+                <div class="review-content-all_review-content-detail">
+                  <div
+                    class="review-content-all_review-content-detail-user_profile"
+                  >
+                    <img
+                      src="img/detail/detail-service.png"
+                      alt="리뷰 프로필사진"
+                    />
+                  </div>
+                  <div
+                    class="review-content-all_review-content-detail-user_review"
+                  >
+                    <div>
+                      <div>{올빼미가 좋은 토끼} | {23.09.18}</div>
+                    </div>
+                    <div>{5.0} 별 별 별 별 별</div>
+                    <div>작업일 : {0}일 | 주문 금액 : {xx}원</div>
+                    <div>
+                      올빼미 그림 너무 귀엽고 예뻐요! 작업속도도 빠르고 만족도도
+                      높습니다. 무엇보다 대표님 짱 친절! 기분좋은 구매였습니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="review-content-all_review-reply">
+                  <div class="review-content-all_review-reply-arrow">
+                    <img src="img/detail/detail-review-arrow.png" />
+                  </div>
+                  <div class="review-content-all_review-reply-content">
+                    <div class="review-content-all_review-reply-username">
+                      {올빼미 사진관} | {23.09.25}
+                    </div>
+                    <div class="review-content-all_review-reply-detail">
+                      <p>
+                        안녕하세요 대표님!<br />
+                        소중한 후기 작성해주셔서 감사드립니다:)<br />
+                        제작하신 로고 디자인이 고객님의 비즈니스에 도움이 되기를
+                        바라며,<br />
+                        더 나은 브랜드 아이덴티티를 위해 계속 노력하는 올빼미
+                        사진관이 되겠습니다.<br />
+                        <br />
+                        * 2023년 로고 브랜드 소비자 만족도 1위 대상<br />
+                        * 대기업경력 디자이너의 브랜딩회의 서비스
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-    </div>
-    <!-- TODO 클래스이름 고민 -->
-    <!-- 결제 동의 & 결제하기 버튼-->
-    <div class="payment-agree-paybtn">
+      </div>
+      <!-- TODO 클래스이름 고민 -->
+      <!-- 결제 동의 & 결제하기 버튼-->
+      <div class="payment-agree-paybtn">
         <div>
-            <div>
-                <button type="button">메시지 보내기</button>
-                <button type="button">결제하기</button>
-            </div>
-            <div>
-                <img src="img/heart.png">
-                <img src="img/heart.png">
-            </div>
+          <div>
+            <button type="button">메시지 보내기</button>
+            <button type="button">결제하기</button>
+          </div>
+          <div>
+            <img src="img/heart.png" />
+            <img src="img/heart.png" />
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
-</body>
+  </body>
 </html>
