@@ -61,12 +61,16 @@
                 class="my-expert-grade-status-box-body-sale-left"
                 style="border-right: 1px solid #adadad"
               >
-                <div>누적 판매 건수</div>
-                <div><span class="personal-info">{누적 판매 건수}</span>건</div>
+                <div class="sales">누적 판매 건수</div>
+                <div class="sales">
+                  <span class="personal-info">{누적 판매 건수}</span>건
+                </div>
               </div>
               <div class="my-expert-grade-status-box-body-sale-right">
-                <div>누적 판매 금액</div>
-                <div><span class="personal-info">{누적 판매 금액}</span>원</div>
+                <div class="sales">누적 판매 금액</div>
+                <div class="sales">
+                  <span class="personal-info">{누적 판매 금액}</span>원
+                </div>
               </div>
             </div>
             <div class="my-expert-grade-status-box-rating">
@@ -120,24 +124,38 @@
               <tr class="light-color">
                 <th class="left-delete">등급</th>
                 <th>누적 판매 금액</th>
-                <th>만족도</th>
-                <th>메시지 응답률</th>
-                <th class="right-delete">주문 성공률</th>
+                <th>누적판매건수</th>
+                <th class="right-delete">서비스 평점</th>
               </tr>
               <tr class="dark-color">
-                <td class="left-delete">Lv. 1</td>
-                <td>5,000원 이상</td>
-                <td rowspan="3">4.7</td>
-                <td rowspan="3">90%</td>
-                <td rowspan="3" class="right-delete">85%</td>
+                <td class="left-delete">Lv. 0</td>
+                <td>-</td>
+                <td>서비스 제작 후 판매 0 건</td>
+                <td class="right-delete">-</td>
               </tr>
               <tr class="light-color">
-                <td class="left-delete">Lv. 2</td>
-                <td>200,000원 이상</td>
+                <td class="left-delete">Lv. 1</td>
+                <td>-</td>
+                <td>서비스 제작 후 판매 1 건 이상</td>
+                <td class="right-delete">-</td>
               </tr>
               <tr class="dark-color">
+                <td class="left-delete">Lv. 2</td>
+                <td>100 만원 이상</td>
+                <td>서비스 제작 후 판매 50 건 이상</td>
+                <td class="right-delete">4.0 이상</td>
+              </tr>
+              <tr class="light-color">
                 <td class="left-delete">Lv. 3</td>
-                <td>500,000원 이상</td>
+                <td>500 만원 이상</td>
+                <td>서비스 제작 후 판매 100 건 이상</td>
+                <td class="right-delete">4.3 이상</td>
+              </tr>
+              <tr class="dark-color">
+                <td class="left-delete">Master</td>
+                <td>1000 만원 이상</td>
+                <td>서비스 제작 후 판매 100 건 이상</td>
+                <td class="right-delete">4.5 이상</td>
               </tr>
             </table>
           </div>
