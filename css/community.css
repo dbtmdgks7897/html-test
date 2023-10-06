@@ -1,0 +1,39 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+}
+
+tr:not(:first-child):hover {
+    background-color: #f5f5f5; /* 첫 번째 행을 제외한 다른 행에 hover 효과 적용 */
+}
+
+/* class */
+.inner-container-body-filter-btn{
+    width: 50%;
+    background-color: #808080;
+    display: inline-flex;
+    padding: 3px;
+    border-radius: 2px;
+}
+.inner-container-body-filter-btn > button{
+    width: 33.33333333333%;
+    background-color: #808080;
+    color: black;
+    
+}
+.inner-container-body-filter-btn > button:hover{
+    background-color: white;
+}
+
+.inner-container-body-table{
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.inner-container-body-table > table{
+    padding: 10px;
+}
