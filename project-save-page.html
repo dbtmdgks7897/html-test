@@ -5,32 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/save-page.css" />
-    <title>서비스 등록하기</title>
+    <title>프로젝트 등록하기</title>
 </head>
 <body>
     <div class="container">
 
-        <div class="title">서비스 등록하기</div>
+        <div class="title">프로젝트 등록하기</div>
         <hr>
         <div class="save-content">
             <div class="save-content-detail">
-                <div class="save-content-text">서비스 제목</div>
+                <div class="save-content-text">프로젝트 제목</div>
                 <div class="save-content-input">
                     <input placeholder="30자 내외로 적어주세요" />
                 </div>
             </div>
             <div>
-                <p>
+                <span>
                     ·[,],<,>,/와 같은 특수 기호는 필요한 경우에만 사용 가능합니다. (웹/앱 개발 등) <br>
                     · 최초, 유일, 누한, 1위, 수익 금액 등 검증 불가한 내용은 사용하실 수 없습니다.
-                </p>
+                </span>
             </div>
             <div class="save-content-detail">
                 <div class="save-content-text">상위 카테고리</div>
                 <div class="save-content-input">
                     <select name="category">
 <!--                        TODO 임시 카테고리 -->
-                        <option value="" disabled selected>선택</option>
                         <option value="apple">사과</option>
                         <option value="banana">바나나</option>
                         <option value="orange">오렌지</option>
@@ -42,7 +41,6 @@
                 <div class="save-content-input">
                     <select name="sub-category">
                         <!--                        TODO 임시 카테고리 -->
-                        <option value="" disabled selected>선택</option>
                         <option value="apple">사과</option>
                         <option value="banana">바나나</option>
                         <option value="orange">오렌지</option>
@@ -52,15 +50,9 @@
             <div>세부 정보</div>
             <hr>
             <div class="save-content-detail">
-                <div class="save-content-text">제목</div>
-                <div class="save-content-input">
-                    <input placeholder="30자 내외로 적어주세요" />
-                </div>
-            </div>
-            <div class="save-content-detail">
                 <div class="save-content-text">설명</div>
                 <div class="save-content-input">
-                    <textarea class="save-content-explanation" placeholder="제공하는 서비스를 300자 내외로 적어주세요" rows="2"></textarea>
+                    <textarea class="save-content-explanation" placeholder="프로젝트에 대해 500자 내외로 적어주세요" rows="2"></textarea>
                 </div>
             </div>
             <div class="save-content-detail">
@@ -70,23 +62,30 @@
                     <input placeholder="기본 금액을 입력해주세요" />
                 </div>
             </div>
+
             <div class="save-content-detail">
-                <div class="save-content-text">작업일</div>
+                <div class="save-content-text">프로젝트 준비 사항</div>
+                <div class="save-content-input">
+                    <select name="preparation">
+                        <!--                        TODO 임시 카테고리 -->
+                        <option value="">구상만 있음</option>
+                        <option value="">기획서 있음</option>
+                        <option value="">시안 있음</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="save-content-detail">
+                <div class="save-content-text">작업 기간</div>
                 <div class="save-content-input">
                     <!-- 뒤에 일 붙이는건 자바스크립트로 -->
                     <input />
                 </div>
             </div>
-            <div>
-                <p>
-                    ·작업물을 발송할 수 있는 예상 기간을 입력하세요. <br>
-                    ·작업물 발송일 준수율은 서비스의 신뢰도와 전문가 등급에 영향을 줍니다. <br>
-                    ·작업 진행 중 의뢰인의 요청사항 변경 등으로 작업일 수정이 필요한 경우, 판매 내역에서 의뢰인에게 작업일 연장 요청을 할 수 있습니다.
-                </p>
-            </div>
+
 
             <div class="save-content-detail">
-                <div class="save-content-text">썸네일 이미지</div>
+                <div class="save-content-text">프로젝트 썸네일</div>
                 <div class="save-content-input-file">
                     <input type="file" />
                     <div class="servie-save-content-img-title">
@@ -104,6 +103,7 @@
             <div class="save-content-detail">
                 <div class="save-content-text">사진 등록</div>
                 <div class="save-content-input-file">
+
                     <!-- 파일 여러개 업로드 해야됨 -->
                     <input type="file" />
                     <div class="servie-save-content-img-title">
@@ -118,34 +118,8 @@
                 </div>
             </div>
 
-            <div class="save-content-detail">
-                <div class="save-content-text">동영상 등록</div>
-                <div class="save-content-input-file">
-
-                    <!-- 동영상 업로드-->
-                    <input type="file" />
-                    <div class="servie-save-content-img-title">
-                        <div class="servie-save-content-img-title-text">등록동영상.mov</div>
-                        <div class="servie-save-content-img-title-x">
-                            <button>X</button>
-                        </div>
-                    </div>
-                    <div class="save-content-upload-explanation">
-                        <span>최대 300MByte까지 등록가능</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="save-content-detail">
-                <div class="save-content-text">수정 횟수</div>
-                <div class="save-content-input">
-                    <!-- 뒤에 회 붙이는건 자바스크립트로 -->
-                    <input />
-                </div>
-            </div>
-
             <button class="save-button">
-                <span>서비스 등록하기</span>
+                <span>프로젝트 등록하기</span>
             </button>
 
         </div>
