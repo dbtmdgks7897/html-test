@@ -1,0 +1,89 @@
+    table {
+            border-collapse: collapse;
+        }
+    th, td {
+            text-align: center;
+            padding: 5px;
+            border: 1px solid #5e5e5e;
+            margin: 0;
+        }
+        .left-delete{
+            border-left: none;
+        }
+        .right-delete{
+            border-right: none;
+        }
+        .light-color{
+            background-color: #d9d9d9;
+        }
+        .dark-color{
+            background-color: #adadad;
+        }
+
+
+        /* class */
+        .container {
+            margin-top: 80px;
+            border-radius: 20px;
+        }
+        .personal-info{
+            font-weight: bold;
+            color: blue;
+        }
+
+        .expert-grade-body{
+            margin-top: 10px;
+        }
+        .my-expert-grade-status-box{
+            border: 1px solid #adadad;
+            padding: 10px 30px;
+            border-radius: 5px;
+        }
+        .my-status{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .my-expert-grade-status-box-body{
+            margin-top: 10px;
+        }
+        .my-expert-grade-status-box-body-sale{
+            display: flex;
+        }
+        .my-expert-grade-status-box-body-sale > div{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid rgb(179, 179, 179);
+        }
+
+        .my-expert-grade-status-footer{
+            font-size: 10px;
+            color: #adadad;
+            padding: 0px 20px;
+        }
+        .my-expert-grade-status-box-rating > div{
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .my-expert-grade-status-box-rating-title{
+            width: 20%;
+        }
+        .my-expert-grade-status-box-rating-bar{
+            width: 70%;
+        }
+        .my-expert-grade-status-box-rating-score{
+            width: 10%;
+        }
+
+        .expert-grade-info-table > table{
+            margin-top: 10px;
+            width: 100%;
+        }
+        .expert-grade-info{
+            margin-top: 50px;
+        }
+
+      
