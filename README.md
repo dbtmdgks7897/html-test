@@ -32,5 +32,8 @@
 1. container 클래스 margin-top 현재 고정값(80px). 수정 필요합니다.
 2. profit-status 클래스 글자 스타일 추후 조정 필요합니다.
 
+### my-service(내 서비스 관리)
+1. container 클래스 margin-top 현재 고정값(80px). 수정 필요합니다.
+
 ### detail.html 주의사항
 1. class이름을 하나하나줘서 복잡한데 프론트에서 사용하기 편하게 수정해서 사용하세요
