@@ -22,10 +22,7 @@
 
 
         /* class */
-        .container {
-            margin-top: 80px;
-            border-radius: 20px;
-        }
+        
         .personal-info{
             font-weight: bold;
             color: blue;
@@ -45,6 +42,9 @@
         }
         .my-expert-grade-status-box-body{
             margin-top: 10px;
+        }
+        .sales{
+            margin-bottom: 10px;
         }
         .my-expert-grade-status-box-body-sale{
             display: flex;

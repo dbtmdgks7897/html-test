@@ -1,9 +1,4 @@
 /* class */
-.container {
-    margin-top: 80px;
-    border-radius: 20px;
-}
-
 header {
     display: none;
 }
@@ -15,10 +10,7 @@ footer {
 .my-ad-manage-container {
     padding: 7% 10%;
 }
-.my-ad-manage-title {
-    font-size: 30px;
-    margin-bottom: 8px;
-}
+
 
 .my-ad-manage-select-term {
     margin-top: 15px;
