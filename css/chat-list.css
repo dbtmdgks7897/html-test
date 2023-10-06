@@ -1,0 +1,79 @@
+/* class */
+.blue {
+    color: #0089ec;
+  }
+
+  .container {
+    margin-top: 80px;
+    border-radius: 20px;
+  }
+
+  .answer-status {
+    border: 1px solid rgb(179, 179, 179);
+    padding: 20px 30px;
+    border-radius: 7px;
+  }
+
+  .answer-status > h3 {
+    color: rgb(179, 179, 179);
+  }
+
+  .answer-status-box {
+    width: 70%;
+    background: rgb(235, 235, 235);
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    border-radius: 30px;
+    margin-top: 20px;
+  }
+
+  .answer-status-box > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chat-list-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chat-search {
+    background-color: rgb(235, 235, 235);
+    width: 80%;
+  }
+
+  .chat-search > input {
+    background-color: rgb(235, 235, 235) !important;
+  }
+
+  .chat-search > button {
+    background-color: rgb(235, 235, 235) !important;
+  }
+
+  .chat-item {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    border-radius: 50px;
+    background-color: #008aec1c;
+    padding: 0px 5%;
+    align-items: center;
+  }
+  .chat-item-image > img {
+    border-radius: 100%;
+  }
+  .chat-item-rows {
+    width: 100%;
+  }
+  .chat-item-row-1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .chat-item-row-2 {
+    display: flex;
+    justify-content: space-between;
+  }
