@@ -1,14 +1,11 @@
-.container{
-    margin-top: 80px;
-    border-radius: 20px;
+.inner-container{
+    padding: 0% 10%;
 }
-
-
 .inner-container-body-project-item{
     display: flex;
     padding: 15px;
     border-radius: 15px;
-    border: 1px solid gray;
+    border: 1px solid #adadad;
     justify-content: space-between;
     margin-top: 10px;
 }
@@ -27,6 +24,7 @@
 
 .project-item-middle{
     flex: 2;
+    margin-left: 20px;
 }
 
 .project-item-right{
@@ -39,12 +37,13 @@
     gap: 10px;
 }
 .project-item-right-bottom{
+    margin-top: 10px;
     display: flex;
     align-items: center;
     width: 120%;
     height: 50px;
     justify-content: center;
-    background-color: gray;
+    background-color: #adadad;
     border-radius: 15px;
 }
 
