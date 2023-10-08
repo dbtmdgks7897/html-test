@@ -31,24 +31,12 @@ hr{
 a {
   text-decoration-line: none;
   /* 색 변경 필요 */
-  color: gray;
+  color: #adadad;
 }
 
-footer {
-  display: block;
-  /* 로그인 페이지에는 안보이게 설정 */
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 6rem;
-  width: 100%;
-  height: 56px;
-  background-color: #e6e6e6;
-}
+
 
 .container {
-  
   background-color: white;
   /* border: 1px solid black; */
   width: 100%;
@@ -62,6 +50,22 @@ footer {
   margin-top: 80px;
   border-radius: 20px;
 }
+
+
+button {
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  color: #808080;
+  border-radius: 5px;
+  background-color:#e5e5e5;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e9ce4; 
+  color: white;
+} 
 
 /* header css */
 header{
@@ -131,17 +135,16 @@ header{
   padding-left: 10px;
 }
 
-button {
-  border-radius: 5px;
-  border: none;
-  font-size: 15px;
-  color: #808080;
-  border-radius: 5px;
-  background-color:#e5e5e5;
-  cursor: pointer;
+/* footer */
+footer {
+  display: block;
+  /* 로그인 페이지에는 안보이게 설정 */
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6rem;
+  width: 100%;
+  height: 56px;
+  background-color: #e6e6e6;
 }
-
-button:hover {
-  background-color: #3e9ce4; 
-  color: white;
-} 
