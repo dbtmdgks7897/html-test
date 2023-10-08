@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+header {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+
 body {
   margin: 0;
   background: #f2f2f2;

@@ -1,3 +1,14 @@
+header {
+    display: none;
+}
+
+footer {
+    display: none;
+}
+
+.ad-request-setting {
+    padding: 0% 10%;
+}
 .ad-type{
     margin-top: 20px; 
     font-size: 20px;
@@ -8,21 +19,25 @@
     display: flex;
     justify-content: space-around;
     height: 50px;
-    border: 2px solid skyblue;
+    border: 2px solid #3e9ce4;
     margin-top: 10px;
     border-radius: 5px;
 }
 .ad-type-inner-box-details1{
+    width: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 .ad-type-inner-box-details2{
+    width: 90px;
     display: flex;
     align-items: center;
-    color: rgba(0, 0, 0, 0.5) ;
+    justify-content: start;
+    color: #adadad ;
 }
 .ad-type-inner-box-details3{
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,4 +91,9 @@
 button{
     margin-top: 100px;
     height: 50px;
+    width: 100%;
 } 
+.ad-payment-button{
+    display: flex;
+    justify-content: center;
+}
