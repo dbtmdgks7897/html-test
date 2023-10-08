@@ -5,50 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/my-service.css">
     <title>내 서비스</title>
-    <style>
-        /* class */
-        .container {
-            margin-top: 80px;
-            border-radius: 20px;
-        }
-
-        .inner-container-body {
-            margin: 20px 5%;
-        }
-
-        .inner-container-body-service {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .middle-service-rating {
-            display: flex;
-            justify-content: space-between;
-        }
-        .left {
-            flex: 0.5;
-            /* .left 요소가 가능한한 많은 공간을 차지하도록 설정합니다. */
-        }
-
-        .middle {
-            flex: 2;
-            /* .middle 요소가 .left보다 두 배 크기를 차지하도록 설정합니다. */
-        }
-
-
-
-        /* id */
-        #header-description-h3 {
-            color: gray;
-            text-align: center;
-        }
-
-        #service-add-btn {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -75,28 +33,28 @@
         </div>
     </header>
     <div class="container">
-        
+
         <!-- 내부 컨테이너 -->
         <div class="inner-container">
-            
+
             <!-- 내부 컨테이너 헤더 -->
             <div class="inner-container-header">
 
                 <!-- 제목 -->
-                <div class="inner-container-header-title">
-                    <h2>내 서비스</h3>
+                <div class="title">
+                    <span>내 서비스</span>
                 </div>
                 <hr>
 
                 <!-- 제목 밑 설명(안내) -->
                 <div class="inner-container-header-description">
-                    <h3 id="header-description-h3">서비스를 등록하거나 수정하고 싶으면 PC 사이트를 이용해 주세요</h3>
+                    <span id="header-description">서비스를 등록하거나 수정하고 싶으면 PC 사이트를 이용해 주세요</span>
                 </div>
             </div>
 
             <!-- 내부 컨테이더 바디(내용) -->
             <div class="inner-container-body">
-                
+
                 <!-- 전체 내 서비스 리스트 -->
                 <div class="inner-container-body-service-list">
 
@@ -118,8 +76,8 @@
                             </div>
                         </div>
                         <div class="right">
-                            <a href="#">수정</a><br>
-                            <a href="#">삭제</a>
+                            <div>수정</div>
+                            <div>삭제</div>
                         </div>
                     </div>
 
@@ -141,8 +99,8 @@
                             </div>
                         </div>
                         <div class="right">
-                            <a href="#">수정</a><br>
-                            <a href="#">삭제</a>
+                            <div>수정</div>
+                            <div>삭제</div>
                         </div>
                     </div>
                     <div class="inner-container-body-service">
@@ -162,8 +120,8 @@
                             </div>
                         </div>
                         <div class="right">
-                            <a href="#">수정</a><br>
-                            <a href="#">삭제</a>
+                            <div>수정</div>
+                            <div>삭제</div>
                         </div>
                     </div>
 
