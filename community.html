@@ -16,15 +16,22 @@
     <header></header>
     <div class="container">
         <div class="inner-container">
+            <!-- 내부 컨테이너 헤더 -->
             <div class="inner-container-header">
+                <!-- 타이틀 -->
                 <div class="title">AI 정보 공유 커뮤니티</div>
             </div>
+
+            <!-- 내부 컨테이너 헤더 -->
             <div class="inner-container-body">
+                <!-- 글 필터 (전체글, 개념글, 추천글) -->
                 <div class="inner-container-body-filter-btn">
                     <button type="button">전체글</button>
                     <button>개념글</button>
                     <button>추천글</button>
                 </div>
+
+                <!-- 게시판 -->
                 <div class="inner-container-body-table">
                     <table>
                         <thead>
@@ -58,19 +65,32 @@
                         </tbody>
                     </table>
                 </div>
+
+                <!-- 글쓰기 버튼 -->
                 <div class="inner-container-body-write-btn">
                     <button>글쓰기</button>
                 </div>
+
+                <!-- 검색창 -->
                 <div class="inner-container-body-search">
-                    <select class="search-options">
-                        <option value="option1" selected>전체</option>
-                        <option value="option2">제목</option>
-                        <option value="option3">내용</option>
-                        <option value="option4">작성자</option>
-                    </select>
-                    <input type="text">
-                    <button>검색</button>
+                    <div>
+                        <!-- 검색 필터 -->
+                        <select class="search-options">
+                            <option value="option1" selected>전체</option>
+                            <option value="option2">제목</option>
+                            <option value="option3">내용</option>
+                            <option value="option4">작성자</option>
+                        </select>
+
+                        <!-- 검색창 -->
+                        <input type="text">
+
+                        <!-- 검색 버튼 -->
+                        <button>검색</button>
+                    </div>
                 </div>
+
+                <!-- 페이징 -->
                 <div class="inner-container-body-paging">
                     <ul>
                         <a href="#">

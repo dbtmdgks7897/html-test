@@ -4,8 +4,14 @@ table {
     width: 100%;
 }
 
-th, td {
+th{
+    text-align: center;
+    padding: 1vw;
+}
+
+td {
     text-align: left;
+    padding: 1vw;
 }
 
 tr:not(:first-child):hover {
@@ -32,8 +38,59 @@ tr:not(:first-child):hover {
 
 .inner-container-body-table{
     border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 20px;
+    padding: 10px;
 }
 .inner-container-body-table > table{
     padding: 10px;
+}
+
+.inner-container-body-write-btn {
+    display: flex;
+    justify-content: end;
+}
+.inner-container-body-write-btn > button {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px;
+    border-radius: 0px;
+}
+
+.inner-container-body-search {
+    display: flex;
+    justify-content: end;
+}
+.inner-container-body-search > div{
+    border: 1px solid black;
+    display: flex;
+}
+.inner-container-body-search > div > select {
+    border: none;
+}
+.inner-container-body-search > div > input {
+    border: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    height: 100%;
+}
+.inner-container-body-search > div > button {
+    background-color: #fff;
+    color: black;
+    padding: 3px;
+}
+
+.inner-container-body-paging {
+    display: flex;
+    justify-content: center;
+}
+.inner-container-body-paging > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.inner-container-body-paging > ul > a {
+    padding: 3px;
+    color: black;
+    border: 1px solid black;
 }
