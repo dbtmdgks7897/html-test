@@ -14,12 +14,12 @@
 
 .mypage-sell-info-count-number>div {
    display: inline;
-   font-size: 2vw;
+   font-size: 20px;
    font-weight: 800;
 }
 
 .mypage-sell-info-count-line {
-   font-size: 3vw;
+   font-size: 3vwv  ;
    font-weight: 600;
    color: #3e9ce4;
 }
@@ -40,7 +40,7 @@
 
 #mypage-sell-info-title>button {
    background: none;
-   font-size: 1vw;
+   font-size: 10px;
    color: #3e9ce4;
 }
 
@@ -57,7 +57,7 @@
    align-items: center;
    padding: 2% 8%;
    margin-bottom: 10%;
-   font-size: 1vw;
+   font-size: 15px;
 }
 
 #mypage-sell-info-count-title>div {
@@ -98,7 +98,7 @@
 }
 /* 정렬순 */
 .sort {
-   font-size: 13px;
+   font-size: 15px;
    font-weight: bold;
 }
 /* 판매정보 */
@@ -119,12 +119,12 @@
 }
 
 .all-status-font {
-   color: skyblue;
-   font-size: large;
+   color: #D2E0F4;
+   font-size: 20px;
 }
 
 .status-schedule-font {
-   color: skyblue;
+   color: #D2E0F4;
 }
 
 .my-sales-status-inner-box2 {

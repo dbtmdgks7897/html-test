@@ -5,281 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/mypage.css" />
   <title>마이 페이지</title>
-  <style>
-    /* class */
 
-    .mypage-container {
-      width: 85%;
-      height: 100vh;
-      margin: auto;
-      padding: 1%;
-      overflow-y: scroll;
-      -ms-overflow-style: none;
-      padding: 8% 0;
-    }
-
-    .mypage-container::-webkit-scrollbar {
-      display: none;
-    }
-
-    .mypage-sell-info-count-number {
-      width: 100px;
-      height: 80px;
-      border: 3px solid #3e9ce4;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .mypage-sell-info-count-number>div {
-      display: inline;
-      font-size: 2vw;
-      font-weight: 800;
-    }
-
-    .mypage-sell-info-count-line {
-      font-size: 3vw;
-      font-weight: 600;
-      color: #3e9ce4;
-    }
-
-    .mypage-sell-issue-category {
-      display: flex;
-      justify-content: space-between;
-      padding: 3%;
-      font-size: 1vw;
-    }
-
-    /*서비스*/
-    .mypage-service-list {
-      width: 50%;
-      margin-left: 2%;
-      margin-top: 3%;
-    }
-
-    .mypage-service-btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: none;
-
-    }
-
-    .mypage-service-btn>div {
-      width: 300px;
-      display: flex;
-      font-size: 1vw;
-      font-weight: 500;
-      margin-left: 10%;
-      color: #31343d;
-    }
-
-    /* id */
-    #mypage-title {
-      padding: 5% 0 3% 0;
-      border-bottom: 2px solid #d9d9d9;
-    }
-
-    #mypage-title>span {
-      font-size: 1.5vw;
-      font-weight: 400;
-    }
-
-    /*유저정보*/
-    #mypage-user-info {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 5%;
-      padding-bottom: 5%;
-    }
-
-    #mypage-profile-img {
-      width: 15%;
-      border-radius: 50%;
-      border: 3px solid #d9d9d9;
-      margin-right: 10%;
-    }
-
-    #mypage-user-info-text-title {
-      display: inline;
-      background-color: #3e9ce4;
-      color: white;
-      border-radius: 20px;
-      padding: 1% 7%;
-      font-size: 0.8vw;
-    }
-
-    #mypage-user-info-text-level {
-      display: inline;
-      background-color: red;
-      color: white;
-      border-radius: 20px;
-      padding: 1% 7%;
-      font-size: 0.8vw;
-    }
-
-    #mypage-user-info-text-name {
-      font-size: 1.5vw;
-      font-weight: 800;
-      margin: 3% 0;
-      color: #31343d;
-    }
-
-    #mypage-user-info-text-reverse {
-      display: flex;
-      justify-content: space-around;
-      background-color: #3e9ce4;
-      border-radius: 10px;
-      padding: 3% 10%;
-    }
-
-    #mypage-user-info-text-reverse>button {
-      height: fit-content;
-      background: none;
-      color: white;
-      font-size: 1vw;
-      font-weight: 600;
-    }
-
-    #mypage-user-info-text-reverse>img {
-      width: 15%;
-    }
-
-    #mypage-user-info-text-reverse>div {
-      font-size: 1vw;
-      color: white;
-    }
-
-    #mypage-user-level>span {
-      font-weight: 800;
-      font-size: 1.3vw;
-    }
-
-    /*보낸제안*/
-    #mypage-suggest {
-      padding: 5%;
-      border-bottom: 1px solid #d9d9d9;
-    }
-
-    #mypage-suggest-title {
-      display: flex;
-      align-items: end;
-      margin-bottom: 2%;
-    }
-
-    #mypage-suggest-title>div {
-      font-size: 1.5vw;
-      font-weight: 700;
-      color: #31343d;
-    }
-
-    #mypage-suggest-title>span {
-      font-size: 1vw;
-      color: #a1a0a5;
-      margin-left: 1%;
-    }
-
-    #mypage-suggest-content {
-      padding: 3%;
-      border: 2px solid #f4f4f4;
-      border-radius: 10px;
-    }
-
-    #mypage-suggest-content>div {
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.1vw;
-      color: #a1a0a5;
-    }
-
-    #mypage-suggest-content>button {
-      width: 80%;
-      height: 50px;
-      margin: auto;
-      display: block;
-      border-radius: 30px;
-      margin-top: 2%;
-      background-color: #3e9ce4;
-      font-size: 1.2vw;
-      font-weight: 700;
-      color: white;
-    }
-
-    #mypage-suggest-profile {
-      display: flex;
-      align-items: center;
-      margin-top: 3%;
-    }
-
-    #mypage-suggest-profile>img {
-      width: 5%;
-      margin-right: 2%;
-    }
-
-    #mypage-suggest-profile>span {
-      font-weight: 600;
-      font-size: 1.3vw;
-      color: #a1a0a5;
-    }
-
-    /*판매 정보*/
-
-    #mypage-sell-info-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    #mypage-sell-info-title>div {
-      font-size: 1.3vw;
-    }
-
-    #mypage-sell-info-title>button {
-      background: none;
-      font-size: 1vw;
-      color: #a1a0a5;
-    }
-
-    #mypage-sell-info-count {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      padding: 2% 10%;
-    }
-
-    #mypage-sell-info-count-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2% 8%;
-      margin-bottom: 10%;
-      font-size: 1vw;
-    }
-
-    #mypage-sell-info-count-title>div {
-      flex-grow: 1;
-      text-align: center;
-    }
-
-    #mypage-sell-issue {
-      display: flex;
-      background-color: #D2E0F4;
-      border-radius: 10px;
-    }
-
-    #mypage-sell-issue>div {
-      flex-grow: 1;
-    }
-
-    /* 서비스 */
-    #mypage-service {
-      padding-top: 4%;
-      margin-bottom: 8%;
-    }
-  </style>
 </head>
 
 <body>
@@ -309,7 +37,7 @@
     <!-- 결제 전체 컨테이너 -->
     <div class="mypage-container">
       <!-- 마이페이지 타이틀 -->
-      <div id="mypage-title">
+      <div class="title">
         <span>마이 페이지</span>
       </div>
 
@@ -373,21 +101,15 @@
         </div>
 
         <div id="mypage-sell-info-count-title">
-          <div>활성화된 요청</div>
+          <div>거래 완료</div>
           <div>작업 진행중</div>
           <div>작업물 발송</div>
           <div>수정 요청</div>
         </div>
 
         <div id="mypage-sell-issue">
-          <div class="mypage-sell-issue-category">
             <div>발송지연</div>
             <div>0건</div>
-          </div>
-          <div class="mypage-sell-issue-category">
-            <div>문제해결요청</div>
-            <div>0건</div>
-          </div>
         </div>
       </div>
 

@@ -3,19 +3,14 @@
     color: #0089ec;
   }
 
-  .container {
-    margin-top: 80px;
-    border-radius: 20px;
-  }
-
   .answer-status {
-    border: 1px solid rgb(179, 179, 179);
+    border: 1px solid #adadad;
     padding: 20px 30px;
-    border-radius: 7px;
+    border-radius: 5px;
   }
 
   .message-response {
-    color: #adadad;
+    color: #5e5e5e;
     font-size: 18px;
   }
 
@@ -57,12 +52,12 @@
   }
 
   .chat-item {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     width: 100%;
     height: 100px;
     border-radius: 5px;
-    background-color: #008aec1c;
+    background-color: #f2f2f2;
     padding: 0px 5%;
     align-items: center;
   }

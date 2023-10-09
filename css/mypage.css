@@ -1,0 +1,262 @@
+/* class */
+
+.mypage-container {
+    width: 85%;
+    height: 100vh;
+    margin: auto;
+    padding: 1%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    padding: 8% 0;
+}
+
+.mypage-container::-webkit-scrollbar {
+    display: none;
+}
+
+.mypage-sell-info-count-number {
+    width: 100px;
+    height: 80px;
+    border: 3px solid #3e9ce4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mypage-sell-info-count-number>div {
+    display: inline;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.mypage-sell-info-count-line {
+    font: size 30px;;
+    font-weight: 600;
+    color: #3e9ce4;
+}
+
+.mypage-sell-issue-category {
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    font-size: 20px;
+}
+
+/*서비스*/
+.mypage-service-list {
+    width: 50%;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+
+.mypage-service-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+
+}
+
+.mypage-service-btn>div {
+    width: 300px;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 10%;
+
+}
+
+/* id */
+#mypage-title {
+    padding: 5% 0 3% 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+/*유저정보*/
+#mypage-user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    padding-bottom: 5%;
+}
+
+#mypage-profile-img {
+    width: 15%;
+    border-radius: 50%;
+    border: 3px solid #d9d9d9;
+    margin-right: 10%;
+}
+
+#mypage-user-info-text-title {
+    display: inline;
+    background-color: #3e9ce4;
+    color: white;
+    border-radius: 30px;
+    padding: 1% 7%;
+    font-size: 0.8vw;
+}
+
+#mypage-user-info-text-level {
+    display: inline;
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+    padding: 1% 7%;
+    font-size: 0.8vw;
+}
+
+#mypage-user-info-text-name {
+    font-size: 1.5vw;
+    font-weight: 800;
+    margin: 3% 0;
+    color: #31343d;
+}
+
+#mypage-user-info-text-reverse {
+    display: flex;
+    justify-content: space-around;
+    background-color: #3e9ce4;
+    border-radius: 10px;
+    padding: 3% 10%;
+}
+
+#mypage-user-info-text-reverse>button {
+    height: fit-content;
+    background: none;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+#mypage-user-info-text-reverse>img {
+    width: 15%;
+}
+
+#mypage-user-info-text-reverse>div {
+    font-size: 10px;
+    color: white;
+}
+
+/*보낸제안*/
+#mypage-suggest {
+    padding: 5%;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+#mypage-suggest-title {
+    display: flex;
+    align-items: end;
+    margin-bottom: 2%;
+}
+
+#mypage-suggest-title>div {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#mypage-suggest-title>span {
+    font-size: 12px;
+    color: #adadad;
+    margin-left: 1%;
+}
+
+#mypage-suggest-content {
+    padding: 3%;
+    border: 2px solid #f2f2f2;
+    border-radius: 5px;
+}
+
+#mypage-suggest-content>div {
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    color: #adadad;
+}
+
+#mypage-suggest-content>button {
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    display: block;
+    border-radius: 30px;
+    margin-top: 2%;
+    background-color: #3e9ce4;
+    font-weight: 700;
+    color: white;
+}
+
+#mypage-suggest-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+}
+
+#mypage-suggest-profile>img {
+    width: 5%;
+    margin-right: 2%;
+}
+
+#mypage-suggest-profile>span {
+    font-weight: 600;
+    font-size: 20px;
+    color: #adadad;
+}
+
+/*판매 정보*/
+
+#mypage-sell-info-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mypage-sell-info-title>div {
+    font-size: 18px
+}
+
+#mypage-sell-info-title>button {
+    background: none;
+    font-size: 15px;
+    color: #adadad;
+}
+
+#mypage-sell-info-count {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2% 10%;
+}
+
+#mypage-sell-info-count-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+    margin-bottom: 10%;
+    font-size: 15px;
+}
+
+#mypage-sell-info-count-title>div {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#mypage-sell-issue {
+    display: flex;
+    background-color: #D2E0F4;
+    border-radius: 5px;
+    justify-content: space-around;
+    padding: 0 10%;
+    align-items: center;
+    height : 50px;
+    font-weight: bold;
+}
+
+
+/* 서비스 */
+#mypage-service {
+    padding-top: 4%;
+    margin-bottom: 8%;
+}
