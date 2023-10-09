@@ -5,12 +5,20 @@
 }
 
 .message-container{
-    border: 1px solid red;
+    border: 1px solid #e2e2e2;
     border-radius: 10px;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
 }
 .message-view-container{
     padding: 8px;
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+}
+
+.message-hr {
+    margin-top: 10px;
 }
 
 .message-title{
@@ -19,4 +27,85 @@
 }
 .message-title-left, .message-title-right {
     display: flex;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    max-height: calc(100% - 60px); /* 스크롤 컨테이너를 제외한 나머지 높이 설정 */
+}
+
+
+/* 메시지 보낸 날짜 */
+.message-content-day{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 메시지 + 시간 */
+.message{
+    display: flex;
+}
+
+/* 본인 메시지 */
+.my-message {
+    /* 본인 메시지 오른쪽*/
+    justify-content: flex-end;
+}
+/* 상대방 메시지 */
+.your-message {
+    /* 상대방 메시지 왼쪽 */
+    justify-content: flex-start;
+}
+
+/* 메시지 텍스트 */
+.message-content-detail{
+    border-radius: 10px;
+    background-color: #eeeeee;
+    padding: 10px;
+    margin: 10px 10px 0px 10px;
+    max-width: 50%;
+}
+
+/* 메시지 보낸 시간 */
+.message-content-time{
+    align-self: flex-end;
+    font-size: 13px;
+}
+
+/* 메시지 입력칸과 전송버튼 */
+.message-send-container{
+    border-top: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1; /* 스크롤 컨테이너 위로 오도록 설정 */
+}
+
+.message-send-input{
+    width: 80%;
+}
+.message-send-input input {
+    border: none;
+    border-radius: 10px;
+    font-size: 2.5vh;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.message-send-button {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.message-send-button button{
+    color: black;
+    font-size: 18px;
+    border-radius: 12px;
+    background-color: #d9d9d9;
+    padding: 10px 30px;
+    margin: 10px 0 10px 0;
 }
