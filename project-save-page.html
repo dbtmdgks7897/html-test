@@ -1,129 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/save-page.css" />
+    <link rel="stylesheet" href="css/project-save-page.css" />
     <title>프로젝트 등록하기</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-
+      <div class="container-inner-box">
         <div class="title">프로젝트 등록하기</div>
-        <hr>
+        <hr />
         <div class="save-content">
-            <div class="save-content-detail">
-                <div class="save-content-text">프로젝트 제목</div>
-                <div class="save-content-input">
-                    <input placeholder="30자 내외로 적어주세요" />
-                </div>
+          <div class="save-content-detail">
+            <div class="save-content-text">프로젝트 제목</div>
+            <div class="save-content-input">
+              <input placeholder="30자 내외로 적어주세요" />
             </div>
-            <div>
-                <span>
-                    ·[,],<,>,/와 같은 특수 기호는 필요한 경우에만 사용 가능합니다. (웹/앱 개발 등) <br>
-                    · 최초, 유일, 누한, 1위, 수익 금액 등 검증 불가한 내용은 사용하실 수 없습니다.
-                </span>
+          </div>
+          <div>
+            <span class="font-blue">
+              · [,],<,>,/와 같은 특수 기호는 필요한 경우에만 사용 가능합니다.
+              (웹/앱 개발 등) <br />
+              · 최초, 유일, 누한, 1위, 수익 금액 등 검증 불가한 내용은 사용하실
+              수 없습니다.
+            </span>
+          </div>
+          <div class="save-content-detail">
+            <div class="save-content-text">상위 카테고리</div>
+            <div class="save-content-input">
+              <select name="category">
+                <!-- TODO 임시 카테고리 -->
+                <option value="" disabled selected>선택</option>
+              </select>
             </div>
-            <div class="save-content-detail">
-                <div class="save-content-text">상위 카테고리</div>
-                <div class="save-content-input">
-                    <select name="category">
-<!--                        TODO 임시 카테고리 -->
-                        <option value="apple">사과</option>
-                        <option value="banana">바나나</option>
-                        <option value="orange">오렌지</option>
-                    </select>
-                </div>
+          </div>
+          <div class="save-content-detail">
+            <div class="save-content-text">하위 카테고리</div>
+            <div class="save-content-input">
+              <select name="sub-category">
+                <!-- TODO 임시 카테고리 -->
+                <option value="" disabled selected>선택</option>
+              </select>
             </div>
-            <div class="save-content-detail">
-                <div class="save-content-text">하위 카테고리</div>
-                <div class="save-content-input">
-                    <select name="sub-category">
-                        <!--                        TODO 임시 카테고리 -->
-                        <option value="apple">사과</option>
-                        <option value="banana">바나나</option>
-                        <option value="orange">오렌지</option>
-                    </select>
-                </div>
+          </div>
+          <div class="details-info">세부 정보</div>
+          <hr />
+          <div class="save-content-detail">
+            <div class="save-content-text">설명</div>
+            <div class="save-content-input" id="explanation">
+              <textarea
+                class="save-content-explanation"
+                placeholder="프로젝트에 대해 500자 내외로 적어주세요"
+                rows="2"
+              ></textarea>
             </div>
-            <div>세부 정보</div>
-            <hr>
-            <div class="save-content-detail">
-                <div class="save-content-text">설명</div>
-                <div class="save-content-input">
-                    <textarea class="save-content-explanation" placeholder="프로젝트에 대해 500자 내외로 적어주세요" rows="2"></textarea>
-                </div>
+          </div>
+          <div class="save-content-detail">
+            <div class="save-content-text">금액(VAT 포함)</div>
+            <div class="save-content-input" id="price">
+              <!-- 뒤에 원 붙이는건 자바스크립트로 -->
+              <input placeholder="기본 금액을 입력해주세요" />
             </div>
-            <div class="save-content-detail">
-                <div class="save-content-text">금액(VAT 포함)</div>
-                <div class="save-content-input">
-                    <!-- 뒤에 원 붙이는건 자바스크립트로 -->
-                    <input placeholder="기본 금액을 입력해주세요" />
-                </div>
-            </div>
+          </div>
 
-            <div class="save-content-detail">
-                <div class="save-content-text">프로젝트 준비 사항</div>
-                <div class="save-content-input">
-                    <select name="preparation">
-                        <!--                        TODO 임시 카테고리 -->
-                        <option value="">구상만 있음</option>
-                        <option value="">기획서 있음</option>
-                        <option value="">시안 있음</option>
-                    </select>
-                </div>
+          <div class="save-content-detail">
+            <div class="save-content-text">프로젝트 준비 사항</div>
+            <div class="save-content-input">
+              <select name="preparation">
+                <!--                        TODO 임시 카테고리 -->
+                <option value="">구상만 있음</option>
+                <option value="">기획서 있음</option>
+                <option value="">시안 있음</option>
+              </select>
             </div>
+          </div>
 
-            <div class="save-content-detail">
-                <div class="save-content-text">작업 기간</div>
-                <div class="save-content-input">
-                    <!-- 뒤에 일 붙이는건 자바스크립트로 -->
-                    <input />
-                </div>
+          <div class="save-content-detail">
+            <div class="save-content-text">작업 기간</div>
+            <div class="save-content-input" id="period">
+              <!-- 뒤에 일 붙이는건 자바스크립트로 -->
+              <input />
             </div>
+          </div>
 
-
-            <div class="save-content-detail">
-                <div class="save-content-text">프로젝트 썸네일</div>
-                <div class="save-content-input-file">
-                    <input type="file" />
-                    <div class="servie-save-content-img-title">
-                        <div class="servie-save-content-img-title-text">올빼미 사진관.png</div>
-                        <div class="servie-save-content-img-title-x">
-                            <button>X</button>
-                        </div>
-                    </div>
-                    <div class="save-content-upload-explanation">
-                        <span>1장만 등록가능</span>
-                    </div>
+          <div class="save-content-detail">
+            <div class="save-content-text">프로젝트 썸네일</div>
+            <div class="save-content-input-file">
+              <input type="file" />
+              <div class="servie-save-content-img-title">
+                <div class="servie-save-content-img-title-text">
+                  올빼미 사진관.png
                 </div>
-            </div>
-
-            <div class="save-content-detail">
-                <div class="save-content-text">사진 등록</div>
-                <div class="save-content-input-file">
-
-                    <!-- 파일 여러개 업로드 해야됨 -->
-                    <input type="file" />
-                    <div class="servie-save-content-img-title">
-                        <div class="servie-save-content-img-title-text">등록사진.png</div>
-                        <div class="servie-save-content-img-title-x">
-                            <button>X</button>
-                        </div>
-                    </div>
-                    <div class="save-content-upload-explanation">
-                        <span>최대 3장까지 등록가능</span>
-                    </div>
+                <div class="servie-save-content-img-title-x">
+                  <button>X</button>
                 </div>
+              </div>
+              <div class="save-content-upload-explanation">
+                <span>1장만 등록가능</span>
+              </div>
             </div>
+          </div>
 
-            <button class="save-button">
-                <span>프로젝트 등록하기</span>
-            </button>
+          <div class="save-content-detail">
+            <div class="save-content-text">사진 등록</div>
+            <div class="save-content-input-file">
+              <!-- 파일 여러개 업로드 해야됨 -->
+              <input type="file" />
+              <div class="servie-save-content-img-title">
+                <div class="servie-save-content-img-title-text">
+                  등록사진.png
+                </div>
+                <div class="servie-save-content-img-title-x">
+                  <button>X</button>
+                </div>
+              </div>
+              <div class="save-content-upload-explanation">
+                <span>최대 3장까지 등록가능</span>
+              </div>
+            </div>
+          </div>
 
+          <button class="save-button">
+            <span>프로젝트 등록하기</span>
+          </button>
         </div>
-
+      </div>
     </div>
-</body>
+  </body>
 </html>

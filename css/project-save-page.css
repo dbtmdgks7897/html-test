@@ -1,0 +1,140 @@
+select {
+    height: 30px;
+}
+
+.container-inner-box {
+    padding: 0% 10%;
+}
+
+.save-content {
+    margin: 0px 10px;
+}
+
+.font-blue {
+    font-size: 12px;
+    color: #0809ec;
+}
+
+.details-info {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.save-content-detail {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+.save-content-text {
+    width: 30%;
+    font-size: 15px;
+    padding: 5px 0px;
+    font-weight: bold;
+}
+
+
+.save-content-input {
+    height: 30px;
+    margin-left: 10px;
+    width: 70%;
+    display: flex;
+}
+
+.save-content-input input,
+textarea,
+select {
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #adadad;
+}
+
+
+.save-content-input-file {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.save-content-input-file input {
+    width: 50px;
+}
+
+
+/* 서비스제목, 작업일 아래 회색 작은글씨 */
+.save-content>div>p {
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+.save-content-explanation {
+    /* 설명 부분 마우스로 조절되던거 못하게 */
+    resize: none;
+}
+
+/* 이미지 등록했을 때 제목 */
+.servie-save-content-img-title {
+    display: flex;
+    border-radius: 50px;
+    border: #adadad;
+}
+
+.servie-save-content-img-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    align-items: center;
+    border: 1px solid #adadad;
+    border-radius: 50px;
+    width: 180px;
+    height: 30px;
+    padding: 0px 10px;
+    margin-right: 10px;
+}
+
+
+/* 이미지, 동영상 업로드할 때 뒤에 작은 회색글씨 */
+.save-content-upload-explanation {
+    font-size: 10px;
+    color: #adadad;
+}
+
+.save-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 20px 0px;
+    height: 50px;
+}
+
+/* id */
+#explanation {
+    height: 60px;
+}
+
+#price::after {
+    content: "원";
+    /* 원하는 단위 값을 여기에 입력합니다. */
+    position: absolute;
+    padding-left: 330px;
+    /* 단위 값을 오른쪽으로 이동시킵니다. */
+    /* top: 5px; */
+    /* 필요한 경우 상단 위치를 조정합니다. */
+    color: black;
+    /* 단위 텍스트의 색상을 설정합니다. */
+}
+
+#period::after {
+    content: "일";
+    /* 원하는 단위 값을 여기에 입력합니다. */
+    position: absolute;
+    padding-left: 330px;
+    /* 단위 값을 오른쪽으로 이동시킵니다. */
+    /* top: 5px; */
+    /* 필요한 경우 상단 위치를 조정합니다. */
+    color: black;
+    /* 단위 텍스트의 색상을 설정합니다. */
+}

@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,12 +18,13 @@ body {
   font-size: 18px;
 }
 
-.title{
+.title {
   font-size: 20px;
   padding: 5% 0 3% 0;
+  font-weight: bold;
 }
 
-hr{
+hr {
   border-color: #e2e2e2;
 }
 
@@ -55,17 +56,17 @@ button {
   font-size: 15px;
   color: #808080;
   border-radius: 5px;
-  background-color:#e5e5e5;
+  background-color: #e5e5e5;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #3e9ce4; 
+  background-color: #3e9ce4;
   color: white;
-} 
+}
 
 /* header css */
-header{
+header {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -112,7 +113,7 @@ header{
   height: 50px;
   padding: 5px 30px;
   display: flex;
-  align-items : center;
+  align-items: center;
 }
 
 .user-infor img {
@@ -128,7 +129,7 @@ header{
   align-items: flex-start;
 }
 
-.alarm div{
+.alarm div {
   padding-left: 10px;
 }
 
