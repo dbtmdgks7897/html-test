@@ -5,44 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sign-up-success.css">
     <title>회원가입 성공</title>
-    <style>
-        header{
-            display: none;
-        }
-        footer{
-            display: none;
-        }
 
-        /* class */
-        .sign-up-success-container {
-            width: 100%;
-            max-width: 350px;
-            margin: auto;
-            padding: 5%;
-            padding-top: 20%;
-        }
-        .user-nick{
-            color: #0982f0;
-        }
-        .bold{
-            font-weight: bold;
-        }
-
-        /* id */
-        #logo{
-            margin: 0 15%;
-        }
-        #go-main{
-            width: 100%;
-        }
-
-    </style>
 </head>
 
 <body>
-    <header></header>
-    <div class="container">
+    <div class="no-container">
         <!-- 전체 컨테이너 -->
         <div class="sign-up-success-container">
             <!-- 로고 -->
@@ -50,18 +19,17 @@
             <p>
                 Congraulations to <span class="user-nick">{#5555}</span>
             </p>
-            <p class="bold">
+            <p class="bold font-20">
                 회원가입에 성공하였습니다!
             </p>
-            <p>
-                앞으로 활동하게 될 닉네임은 <span class="user-nick">{#5555}</span>입니다
+            <p class="bold font-18">
+                앞으로 활동하게 될 닉네임은<br> <span class="user-nick">{#5555}</span>입니다
             </p>
             <!-- 이미지 추가 필요 -->
             <img src="img/logo.png" alt="무슨 이미지?" width="100%">
             <button id="go-main">메인 화면으로 가기</button>
         </div>
     </div>
-    <footer></footer>
 </body>
 
 </html>

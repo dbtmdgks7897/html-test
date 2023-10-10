@@ -1,0 +1,53 @@
+button {
+    height: 50px;
+}
+
+/* class */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-success-container {
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+}
+
+.user-nick {
+    color: #3e9ce4;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.sign-up-success-container>p {
+    margin-top: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+/* id */
+#logo {
+    margin: 0 15%;
+}
+
+#logo>p {
+    margin-top: 50px;
+}
+
+#logo>p {}
+
+#go-main {
+    width: 100%;
+}
