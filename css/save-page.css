@@ -1,8 +1,4 @@
-select {
-    height: 30px;
-}
-
-.container-inner-box {
+.container-innerbox {
     padding: 0% 10%;
 }
 
@@ -10,33 +6,24 @@ select {
     margin: 0px 10px;
 }
 
-.font-blue {
-    font-size: 12px;
-    color: #0809ec;
-}
-
-.details-info {
-    margin-top: 10px;
-    font-size: 20px;
-}
-
 .save-content-detail {
     display: flex;
+    /*border: 1px solid red;*/
     margin-top: 10px;
 }
 
+.save-content-input-file {
+    display: flex;
+    align-items: center;
+}
 
 .save-content-text {
     width: 30%;
     font-size: 15px;
     padding: 5px 0px;
-    font-weight: bold;
 }
 
-
 .save-content-input {
-    height: 30px;
-    margin-left: 10px;
     width: 70%;
     display: flex;
 }
@@ -47,13 +34,11 @@ select {
     padding: 5px;
     width: 100%;
     border: 1px solid #adadad;
+    height: 30px;
 }
-
 
 .save-content-input-file {
     display: flex;
-    align-items: center;
-    align-content: center;
 }
 
 .save-content-input-file input {
@@ -64,7 +49,13 @@ select {
 /* 서비스제목, 작업일 아래 회색 작은글씨 */
 .save-content>div>p {
     margin-top: 5px;
-    font-size: 10px;
+    font-size: 12px;
+    color: #0809ec;
+}
+
+.details-info {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 .save-content-explanation {
@@ -73,12 +64,6 @@ select {
 }
 
 /* 이미지 등록했을 때 제목 */
-.servie-save-content-img-title {
-    display: flex;
-    border-radius: 50px;
-    border: #adadad;
-}
-
 .servie-save-content-img-title {
     display: flex;
     justify-content: space-between;
@@ -92,6 +77,10 @@ select {
     margin-right: 10px;
 }
 
+.servie-save-content-img-title-text {
+    font-size: 15px;
+}
+
 
 /* 이미지, 동영상 업로드할 때 뒤에 작은 회색글씨 */
 .save-content-upload-explanation {
@@ -100,31 +89,30 @@ select {
 }
 
 .save-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 20px;
     border-radius: 5px;
     width: 100%;
     padding: 20px 0px;
-    height: 50px;
 }
 
 /* id */
-#explanation {
-    height: 60px;
-}
-
 /* #price::after {
     content: "원";
     position: absolute;
-    padding-left: 330px;
+    padding-left: 280px;
     color: black;
 }
 
 #period::after {
     content: "일";
     position: absolute;
-    padding-left: 330px;
+    padding-left: 280px;
+    color: black;
+}
+
+#revisions::after {
+    content: "회";
+    position: absolute;
+    padding-left: 280px;
     color: black;
 } */
