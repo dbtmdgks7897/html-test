@@ -5,43 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sign-up-choice.css">
     <title>회원가입 선택</title>
-    <style>
-        header{
-            display: none;
-        }
-        footer{
-            display: none;
-        }
-
-        /* class */
-        .sign-in-choice-container {
-            width: 100%;
-            max-width: 350px;
-            margin: auto;
-            padding: 5%;
-            padding-top: 20%;
-        }
-
-        .bold{
-            font-weight: bold;
-        }
-
-        .choice-button > button{
-            width: 100%;
-            height: 100%;
-        }
-
-
-        /* id */
-        #logo{
-            margin: 0 15%;
-        }
-    </style>
 </head>
 
 <body>
-    <header></header>
     <div class="container">
         <!-- 회원가입 선택 전체 컨테이너 -->
         <div class="sign-in-choice-container">
@@ -51,7 +19,7 @@
             <img id="logo" src="img/logo.png" alt="로고 이미지" width="70%">
 
             <!-- 안내 문구 -->
-            <h1>환영합니다</h1>
+            <div class="instructions">환영합니다</div>
             <p>
                 작업 의뢰를 맡기고 싶다면 의뢰인으로,<br>
                 전문성으로 수익 창출을 원하신다면 전문가로<br>
@@ -64,19 +32,18 @@
 
                 <!-- 의뢰인 -->
                 <button id="requester">
-                    <span class="bold">의뢰인으로 가입하기</span><br>
-                    <span>외주 / 아웃소싱 맡길 곳을 찾고 있나요?</span>
+                    <span class="bold">의뢰인으로 가입하기</span><br />
+                    <span class="font-small">외주 / 아웃소싱 맡길 곳을 찾고 있나요?</span>
                 </button>
 
                 <!-- 전문가 -->
                 <button id="professional">
-                    <span class="bold">전문가로 가입하기</span><br>
-                    <span>내가 가진 기술로 수익을 창출하고 싶나요?</span>
+                    <span class="bold">전문가로 가입하기</span><br />
+                    <span class="font-small">내가 가진 기술로 수익을 창출하고 싶나요?</span>
                 </button>
             </div>
         </div>
     </div>
-    <footer></footer>
 </body>
 
 </html>
