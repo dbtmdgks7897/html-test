@@ -1,3 +1,9 @@
+button {
+   background-color: white;
+   color: black;
+   border: 2px solid #adadad;
+}
+
 .container-inner-box {
    padding: 0px 5%
 }
@@ -19,7 +25,7 @@
 }
 
 .mypage-sell-info-count-line {
-   font-size: 3vwv  ;
+   font-size: 3vwv;
    font-weight: 600;
    color: #3e9ce4;
 }
@@ -78,12 +84,13 @@
 .work-progress {
    margin-top: 20px;
 }
+
 .mypage-sell-issue-delay {
    display: flex;
    justify-content: space-around;
    padding: 0 10%;
    align-items: center;
-   height : 50px;
+   height: 50px;
    font-weight: bold;
 }
 
@@ -93,14 +100,17 @@
    margin-top: 30px;
    margin-bottom: 10px;
 }
-.date{
+
+.date {
    height: 30px;
 }
+
 /* 정렬순 */
 .sort {
    font-size: 15px;
    font-weight: bold;
 }
+
 /* 판매정보 */
 .my-sales-status {
    padding: 5px 15px;
@@ -157,7 +167,7 @@
    font-size: 20px
 }
 
-.service-price-font { 
+.service-price-font {
    color: #0809ec;
    font-size: 18px
 }
@@ -204,11 +214,14 @@
 }
 
 .my-sales-status-inner-box3 {
+
+   background-color: #f2f2f2;
    display: flex;
    width: 100%;
    justify-content: space-between;
    margin-bottom: 15px;
    margin-top: 10px;
+   padding-left: 10px;
 }
 
 .my-sales-status-inner-box3-text {
