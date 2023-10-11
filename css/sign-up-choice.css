@@ -1,13 +1,6 @@
 /* class */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .sign-in-choice-container {
-    width: 100%;
-    max-width: 350px;
+    width: 50%;
     margin: auto;
 }
 

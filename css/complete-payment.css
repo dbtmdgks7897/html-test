@@ -1,0 +1,70 @@
+button {
+    height: 50px;
+    width: 150px;
+}
+
+/* class */
+.complete-payment-container {
+    width: 70%;
+    margin: auto;
+}
+
+.complete-payment {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.complete-payment-info {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+}
+
+.two-button {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.payment {
+    height: 150px;
+    margin-top: 50px;
+    border: 2px solid #f2f2f2f2;
+    border-radius: 5px;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-info {
+    width: 80%;
+
+}
+
+.payment-info-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tatol-price {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.kakao-pay {
+    font-size: 15px;
+    height: 50px;
+    padding: 0 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2f2;
+    color: #adadad;
+}
