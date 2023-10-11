@@ -2,6 +2,8 @@ img {
     border-radius: 100%;
 }
 
+
+
 /* class */
 .message-container {
     border: 1px solid #f2f2f2;
@@ -65,6 +67,7 @@ img {
 .my-message {
     /* 본인 메시지 오른쪽*/
     justify-content: flex-end;
+    background-color: 3e9ce4;
 }
 
 /* 상대방 메시지 */
@@ -74,9 +77,17 @@ img {
 }
 
 /* 메시지 텍스트 */
-.message-content-detail {
+.message-content-my-detail {
     border-radius: 5px;
     background-color: #f2f2f2;
+    padding: 10px;
+    margin: 10px 10px 0px 10px;
+    max-width: 50%;
+}
+
+.message-content-your-detail {
+    border-radius: 5px;
+    background-color: #3e9ce4;
     padding: 10px;
     margin: 10px 10px 0px 10px;
     max-width: 50%;
@@ -90,11 +101,27 @@ img {
 
 /* 메시지 입력칸과 전송버튼 */
 .message-send-container {
-    border: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
     display: flex;
     justify-content: space-between;
     z-index: 1;
     /* 스크롤 컨테이너 위로 오도록 설정 */
+}
+
+
+/* 첨부파일 안전결제요청 */
+.add-ons {
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+}
+
+.add-ons>button {
+    height: 30px;
+    background-color: white;
+    border: 1px solid #adadad;
+    border-radius: 30px;
 }
 
 .message-send-input {
@@ -128,4 +155,9 @@ img {
     background-color: #d9d9d9;
     padding: 10px 30px;
     margin: 10px 0 10px 0;
+}
+
+button:hover {
+    background-color: #3e9ce4;
+    color: white;
 }
