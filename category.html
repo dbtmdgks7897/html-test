@@ -1,288 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/category.css" />
-    <title>카테고리</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="search">
-        <input
-          type="text"
-          placeholder="검색어를 입력해주세요"
-          class="search-field"
-        />
-        <button type="button" class="search-button">
-          <img src="https://via.placeholder.com/30" alt="" />
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/category.css" />
+  <title>카테고리</title>
+</head>
+
+<body>
+  <header>
+    <div class="search">
+      <input type="text" placeholder="검색어를 입력해주세요" class="search-field" />
+      <button type="button" class="search-button">
+        <img src="https://via.placeholder.com/30" alt="" />
+      </button>
+    </div>
+    <div class="user-infor">
+      <div>
+        <img src="https://via.placeholder.com/40" alt="" />
       </div>
-      <div class="user-infor">
-        <div>
-          <img src="https://via.placeholder.com/40" alt="" />
-        </div>
-        <div class="nickname">닉네임</div>
+      <div class="nickname">닉네임</div>
+    </div>
+    <div class="alarm">
+      <div class="alarm-image">
+        <img src="https://via.placeholder.com/30x50" alt="" />
       </div>
-      <div class="alarm">
-        <div class="alarm-image">
-          <img src="https://via.placeholder.com/30x50" alt="" />
+      <div class="alarm-state-image">
+        <img src="https://via.placeholder.com/10" alt="" />
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <!-- 최상단 경로 -->
+    <div class="category-route">
+      <span>홈>디자인{카테고리 이름}</span>
+    </div>
+
+    <!-- 드롭다운 -->
+    <div class="sort-dropdowns">
+      <div>
+        <select name="category-detail" id="category-detail" class="category-detail">
+          <option disabled selected>세부 카테고리</option>
+          <option value="디자인">디자인</option>
+        </select>
+      </div>
+      <div>
+        <select name="sort" id="sort" class="sort">
+          <option disabled selected>정렬</option>
+          <option value="오름차순">오름차순</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 서비스 리스트 -->
+    <div class="service-card-list">
+      <!-- 개별 서비스 -->
+      <div class="service-card">
+        <!-- 서비스 이미지  -->
+        <div class="service-image">
+          <img src="img/square.png" alt="게시물 이미지" />
+          <div class="image-icon">icon</div>
         </div>
-        <div class="alarm-state-image">
-          <img src="https://via.placeholder.com/10" alt="" />
+
+        <!-- 서비스 작성자 -->
+        <div class="service-writer">
+          <span id="badge">{MASTER}</span>
+          <span>{하늘 그리다}</span>
+        </div>
+
+        <!-- 서비스 제목 -->
+        <div class="service-title">
+          <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
+        </div>
+
+        <!-- 서비스 가격 -->
+        <div class="service-price-box">
+          <div class="price-icon">{icon}</div>
+          <span class="price">{50,000}~</span>
+        </div>
+
+        <!-- 서비스 평가 -->
+        <div class="service-rating-box">
+          <div class="rating-score-box">
+            <div class="rating-icon">{icon}</div>
+            <span class="rating-score">{4.9}</span>
+          </div>
+          <!-- 평가 점수와 갯수 분리 "|" -->
+          |
+          <div class="rating-count"><span>{137}</span>개의 평가</div>
         </div>
       </div>
-    </header>
-    <div class="container">
-      <!-- 최상단 경로 -->
-      <div class="category-route">
-        <span>홈 > {디자인}</span>
+
+      <!-- 아래 쪽은 더미 -->
+      <!-- 개별 서비스 -->
+      <div class="service-card">
+        <!-- 서비스 이미지  -->
+        <div class="service-image">
+          <img src="img/square.png" alt="게시물 이미지" />
+          <div class="image-icon">icon</div>
+        </div>
+
+        <!-- 서비스 작성자 -->
+        <div class="service-writer">
+          <span id="badge">{MASTER}</span>
+          <span>{하늘 그리다}</span>
+        </div>
+
+        <!-- 서비스 제목 -->
+        <div class="card-title">
+          <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
+        </div>
+
+        <!-- 서비스 가격 -->
+        <div class="service-price-box">
+          <div class="price-icon">{icon}</div>
+          <span class="price">{50,000}~</span>
+        </div>
+
+        <!-- 서비스 평가 -->
+        <div class="service-rating-box">
+          <div class="rating-score-box">
+            <div class="rating-icon">{icon}</div>
+            <span class="rating-score">{4.9}</span>
+          </div>
+          <!-- 평가 점수와 갯수 분리 "|" -->
+          |
+          <div class="rating-count"><span>{137}</span>개의 평가</div>
+        </div>
       </div>
-
-      <!-- 드롭다운 -->
-      <div class="sort-dropdowns">
-        <div>
-          <select
-            name="category-detail"
-            id="category-detail"
-            class="category-detail"
-          >
-            <option disabled selected>세부 카테고리</option>
-            <option value="디자인">디자인</option>
-          </select>
+      <!-- 개별 서비스 -->
+      <div class="service-card">
+        <!-- 서비스 이미지  -->
+        <div class="service-image">
+          <img src="img/square.png" alt="게시물 이미지" />
+          <div class="image-icon">icon</div>
         </div>
-        <div>
-          <select name="sort" id="sort" class="sort">
-            <option disabled selected>정렬</option>
-            <option value="오름차순">오름차순</option>
-          </select>
+
+        <!-- 서비스 작성자 -->
+        <div class="service-writer">
+          <span id="badge">{MASTER}</span>
+          <span>{하늘 그리다}</span>
+        </div>
+
+        <!-- 서비스 제목 -->
+        <div class="card-title">
+          <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
+        </div>
+
+        <!-- 서비스 가격 -->
+        <div class="service-price-box">
+          <div class="price-icon">{icon}</div>
+          <span class="price">{50,000}~</span>
+        </div>
+
+        <!-- 서비스 평가 -->
+        <div class="service-rating-box">
+          <div class="rating-score-box">
+            <div class="rating-icon">{icon}</div>
+            <span class="rating-score">{4.9}</span>
+          </div>
+          <!-- 평가 점수와 갯수 분리 "|" -->
+          |
+          <div class="rating-count"><span>{137}</span>개의 평가</div>
         </div>
       </div>
-
-      <!-- 서비스 리스트 -->
-      <div class="service-card-list">
-        <!-- 개별 서비스 -->
-        <div class="service-card">
-          <!-- 서비스 이미지  -->
-          <div class="service-image">
-            <img src="img/square.png" alt="게시물 이미지" />
-            <div class="image-icon">icon</div>
-          </div>
-
-          <!-- 서비스 작성자 -->
-          <div class="service-writer">
-            <span id="badge">{MASTER}</span>
-            <span>{하늘 그리다}</span>
-          </div>
-
-          <!-- 서비스 제목 -->
-          <div class="service-title">
-            <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
-          </div>
-
-          <!-- 서비스 가격 -->
-          <div class="service-price-box">
-            <div class="price-icon">{icon}</div>
-            <span class="price">{50,000}~</span>
-          </div>
-
-          <!-- 서비스 평가 -->
-          <div class="service-rating-box">
-            <div class="rating-score-box">
-              <div class="rating-icon">{icon}</div>
-              <span class="rating-score">{4.9}</span>
-            </div>
-            <!-- 평가 점수와 갯수 분리 "|" -->
-            |
-            <div class="rating-count"><span>{137}</span>개의 평가</div>
-          </div>
+      <!-- 개별 서비스 -->
+      <div class="service-card">
+        <!-- 서비스 이미지  -->
+        <div class="service-image">
+          <img src="img/square.png" alt="게시물 이미지" />
+          <div class="image-icon">icon</div>
         </div>
 
-        <!-- 아래 쪽은 더미 -->
-        <!-- 개별 서비스 -->
-        <div class="service-card">
-          <!-- 서비스 이미지  -->
-          <div class="service-image">
-            <img src="img/square.png" alt="게시물 이미지" />
-            <div class="image-icon">icon</div>
-          </div>
-
-          <!-- 서비스 작성자 -->
-          <div class="service-writer">
-            <span id="badge">{MASTER}</span>
-            <span>{하늘 그리다}</span>
-          </div>
-
-          <!-- 서비스 제목 -->
-          <div class="card-title">
-            <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
-          </div>
-
-          <!-- 서비스 가격 -->
-          <div class="service-price-box">
-            <div class="price-icon">{icon}</div>
-            <span class="price">{50,000}~</span>
-          </div>
-
-          <!-- 서비스 평가 -->
-          <div class="service-rating-box">
-            <div class="rating-score-box">
-              <div class="rating-icon">{icon}</div>
-              <span class="rating-score">{4.9}</span>
-            </div>
-            <!-- 평가 점수와 갯수 분리 "|" -->
-            |
-            <div class="rating-count"><span>{137}</span>개의 평가</div>
-          </div>
+        <!-- 서비스 작성자 -->
+        <div class="service-writer">
+          <span id="badge">{MASTER}</span>
+          <span>{하늘 그리다}</span>
         </div>
-        <!-- 개별 서비스 -->
-        <div class="service-card">
-          <!-- 서비스 이미지  -->
-          <div class="service-image">
-            <img src="img/square.png" alt="게시물 이미지" />
-            <div class="image-icon">icon</div>
-          </div>
 
-          <!-- 서비스 작성자 -->
-          <div class="service-writer">
-            <span id="badge">{MASTER}</span>
-            <span>{하늘 그리다}</span>
-          </div>
-
-          <!-- 서비스 제목 -->
-          <div class="card-title">
-            <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
-          </div>
-
-          <!-- 서비스 가격 -->
-          <div class="service-price-box">
-            <div class="price-icon">{icon}</div>
-            <span class="price">{50,000}~</span>
-          </div>
-
-          <!-- 서비스 평가 -->
-          <div class="service-rating-box">
-            <div class="rating-score-box">
-              <div class="rating-icon">{icon}</div>
-              <span class="rating-score">{4.9}</span>
-            </div>
-            <!-- 평가 점수와 갯수 분리 "|" -->
-            |
-            <div class="rating-count"><span>{137}</span>개의 평가</div>
-          </div>
+        <!-- 서비스 제목 -->
+        <div class="card-title">
+          <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
         </div>
-        <!-- 개별 서비스 -->
-        <div class="service-card">
-          <!-- 서비스 이미지  -->
-          <div class="service-image">
-            <img src="img/square.png" alt="게시물 이미지" />
-            <div class="image-icon">icon</div>
-          </div>
 
-          <!-- 서비스 작성자 -->
-          <div class="service-writer">
-            <span id="badge">{MASTER}</span>
-            <span>{하늘 그리다}</span>
-          </div>
-
-          <!-- 서비스 제목 -->
-          <div class="card-title">
-            <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
-          </div>
-
-          <!-- 서비스 가격 -->
-          <div class="service-price-box">
-            <div class="price-icon">{icon}</div>
-            <span class="price">{50,000}~</span>
-          </div>
-
-          <!-- 서비스 평가 -->
-          <div class="service-rating-box">
-            <div class="rating-score-box">
-              <div class="rating-icon">{icon}</div>
-              <span class="rating-score">{4.9}</span>
-            </div>
-            <!-- 평가 점수와 갯수 분리 "|" -->
-            |
-            <div class="rating-count"><span>{137}</span>개의 평가</div>
-          </div>
+        <!-- 서비스 가격 -->
+        <div class="service-price-box">
+          <div class="price-icon">{icon}</div>
+          <span class="price">{50,000}~</span>
         </div>
-        <!-- 개별 서비스 -->
-        <div class="service-card">
-          <!-- 서비스 이미지  -->
-          <div class="service-image">
-            <img src="img/square.png" alt="게시물 이미지" />
-            <div class="image-icon">icon</div>
-          </div>
 
-          <!-- 서비스 작성자 -->
-          <div class="service-writer">
-            <span id="badge">{MASTER}</span>
-            <span>{하늘 그리다}</span>
+        <!-- 서비스 평가 -->
+        <div class="service-rating-box">
+          <div class="rating-score-box">
+            <div class="rating-icon">{icon}</div>
+            <span class="rating-score">{4.9}</span>
           </div>
-
-          <!-- 서비스 제목 -->
-          <div class="card-title">
-            <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
-          </div>
-
-          <!-- 서비스 가격 -->
-          <div class="service-price-box">
-            <div class="price-icon">{icon}</div>
-            <span class="price">{50,000}~</span>
-          </div>
-
-          <!-- 서비스 평가 -->
-          <div class="service-rating-box">
-            <div class="rating-score-box">
-              <div class="rating-icon">{icon}</div>
-              <span class="rating-score">{4.9}</span>
-            </div>
-            <!-- 평가 점수와 갯수 분리 "|" -->
-            |
-            <div class="rating-count"><span>{137}</span>개의 평가</div>
-          </div>
+          <!-- 평가 점수와 갯수 분리 "|" -->
+          |
+          <div class="rating-count"><span>{137}</span>개의 평가</div>
         </div>
-        <!-- 개별 서비스 -->
-        <div class="service-card">
-          <!-- 서비스 이미지  -->
-          <div class="service-image">
-            <img src="img/square.png" alt="게시물 이미지" />
-            <div class="image-icon">icon</div>
-          </div>
+      </div>
+      <!-- 개별 서비스 -->
+      <div class="service-card">
+        <!-- 서비스 이미지  -->
+        <div class="service-image">
+          <img src="img/square.png" alt="게시물 이미지" />
+          <div class="image-icon">icon</div>
+        </div>
 
-          <!-- 서비스 작성자 -->
-          <div class="service-writer">
-            <span id="badge">{MASTER}</span>
-            <span>{하늘 그리다}</span>
-          </div>
+        <!-- 서비스 작성자 -->
+        <div class="service-writer">
+          <span id="badge">{MASTER}</span>
+          <span>{하늘 그리다}</span>
+        </div>
 
-          <!-- 서비스 제목 -->
-          <div class="card-title">
-            <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
-          </div>
+        <!-- 서비스 제목 -->
+        <div class="card-title">
+          <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
+        </div>
 
-          <!-- 서비스 가격 -->
-          <div class="service-price-box">
-            <div class="price-icon">{icon}</div>
-            <span class="price">{50,000}~</span>
-          </div>
+        <!-- 서비스 가격 -->
+        <div class="service-price-box">
+          <div class="price-icon">{icon}</div>
+          <span class="price">{50,000}~</span>
+        </div>
 
-          <!-- 서비스 평가 -->
-          <div class="service-rating-box">
-            <div class="rating-score-box">
-              <div class="rating-icon">{icon}</div>
-              <span class="rating-score">{4.9}</span>
-            </div>
-            <!-- 평가 점수와 갯수 분리 "|" -->
-            |
-            <div class="rating-count"><span>{137}</span>개의 평가</div>
+        <!-- 서비스 평가 -->
+        <div class="service-rating-box">
+          <div class="rating-score-box">
+            <div class="rating-icon">{icon}</div>
+            <span class="rating-score">{4.9}</span>
           </div>
+          <!-- 평가 점수와 갯수 분리 "|" -->
+          |
+          <div class="rating-count"><span>{137}</span>개의 평가</div>
+        </div>
+      </div>
+      <!-- 개별 서비스 -->
+      <div class="service-card">
+        <!-- 서비스 이미지  -->
+        <div class="service-image">
+          <img src="img/square.png" alt="게시물 이미지" />
+          <div class="image-icon">icon</div>
+        </div>
+
+        <!-- 서비스 작성자 -->
+        <div class="service-writer">
+          <span id="badge">{MASTER}</span>
+          <span>{하늘 그리다}</span>
+        </div>
+
+        <!-- 서비스 제목 -->
+        <div class="card-title">
+          <span>{'로고디자인' 심플, 감각적인 로고를 제작해 드립니다.}</span>
+        </div>
+
+        <!-- 서비스 가격 -->
+        <div class="service-price-box">
+          <div class="price-icon">{icon}</div>
+          <span class="price">{50,000}~</span>
+        </div>
+
+        <!-- 서비스 평가 -->
+        <div class="service-rating-box">
+          <div class="rating-score-box">
+            <div class="rating-icon">{icon}</div>
+            <span class="rating-score">{4.9}</span>
+          </div>
+          <!-- 평가 점수와 갯수 분리 "|" -->
+          |
+          <div class="rating-count"><span>{137}</span>개의 평가</div>
         </div>
       </div>
     </div>
-    <footer></footer>
-  </body>
+  </div>
+  <footer></footer>
+</body>
+
 </html>

@@ -1,6 +1,11 @@
 /* 맨위 미리보기? */
 .container {
     padding: 0;
+    height: 2150px;
+}
+
+.container-inner-box {
+    margin-bottom: 50px;
 }
 
 .preview-container {
@@ -189,16 +194,22 @@
 
 
 .profile-content-status {
+    height: 80px;
     background-color: #f2f2f2;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
-    padding: 20px 70px;
+    align-items: center;
     margin-top: 20px;
+}
+
+.right-bold {
+    border-right: 1px solid #adadad;
 }
 
 .profile-content-status-detail {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
 }
