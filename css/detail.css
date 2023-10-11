@@ -39,6 +39,10 @@
     margin-bottom: 20px;
 }
 
+.service-container {
+    height: 600px;
+}
+
 /* 내용 컨테이너 - 타이틀*/
 .content-detail_container-title {
     background-color: #f2f2f2;
@@ -240,7 +244,7 @@
 
 .service-content img {
     max-width: 100%;
-    height: auto;
+    height: 300px;
 }
 
 /* 더보기 버튼 */
@@ -366,6 +370,7 @@
     left: 0;
     right: 0;
     bottom: 5%;
+    z-index: 2;
 }
 
 .payment-agree-paybtn>div {

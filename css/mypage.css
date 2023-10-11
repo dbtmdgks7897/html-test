@@ -75,9 +75,10 @@
 /*유저정보*/
 #mypage-user-info {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     margin-top: 5%;
+    padding-left: 5%;
     padding-bottom: 5%;
 }
 
@@ -97,22 +98,20 @@
     font-size: 0.8vw;
 }
 
-#mypage-user-info-text-level {
-    height: 50px;
+#mypage-user-info-text-1 {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    background-color: #D2E0F4;
-    border-radius: 5px;
-    padding: 1% 7%;
-    margin-left: 30px;
-    margin-right: 30px;
     font-size: 15px;
     font-weight: bold;
 }
 
+#mypage-user-info-text-level {
+    margin-left: 10px;
+}
+
 #mypage-user-info-text-name {
-    font-size: 1.5vw;
+    font-size: 18px;
     font-weight: 800;
     margin: 3% 0;
     color: #31343d;
@@ -152,15 +151,16 @@
 #mypage-suggest-title {
     display: flex;
     align-items: end;
+    justify-content: space-between;
     margin-bottom: 2%;
 }
 
-#mypage-suggest-title>div {
+#mypage-suggest-title-1 {
     font-size: 20px;
     font-weight: 700;
 }
 
-#mypage-suggest-title>span {
+#mypage-suggest-title-2 {
     font-size: 12px;
     color: #adadad;
     margin-left: 1%;
@@ -246,6 +246,14 @@
     flex-grow: 1;
     text-align: center;
     font-size: 12px;
+}
+
+#mypage-sell-info-count-title-1 {
+    padding-left: 10px;
+}
+
+#mypage-sell-info-count-title-4 {
+    padding-right: 10px;
 }
 
 #mypage-sell-issue {
