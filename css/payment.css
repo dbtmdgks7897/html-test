@@ -1,11 +1,9 @@
-
 /* class */
 
 .payment-container {
   width: 85%;
   height: 100%;
   margin: auto;
-  padding: 1%;
   -ms-overflow-style: none;
   padding-bottom: 15%;
 }
@@ -30,7 +28,7 @@
   justify-content: space-around;
 }
 
-.payment-category-title > div {
+.payment-category-title>div {
   flex-grow: 1;
   width: 50%;
 }
@@ -50,12 +48,12 @@
   margin-top: 2%;
 }
 
-.payment-sub-title > div {
+.payment-sub-title>div {
   flex-grow: 1;
   width: 33%;
 }
 
-.payment-sub-items > div {
+.payment-sub-items>div {
   flex-grow: 1;
   width: 33%;
 }
@@ -66,11 +64,11 @@
   margin-bottom: 1%;
 }
 
-.payment-basic-items-content > img {
+.payment-basic-items-content>img {
   margin-right: 2%;
 }
 
-.payment-basic-items-content > span {
+.payment-basic-items-content>span {
   margin-right: 2%;
   font-size: 10px;
   color: #5e5e5e;
@@ -112,7 +110,7 @@
   padding: 0% 2%;
 }
 
-#payment-order-title > span {
+#payment-order-title>span {
   font-weight: 600;
   font-size: 15px;
 }
@@ -131,7 +129,7 @@
   overflow: hidden;
 }
 
-#payment-company-img > img {
+#payment-company-img>img {
   position: absolute;
   top: 0;
   left: 0;
@@ -140,13 +138,13 @@
   object-fit: cover;
 }
 
-#payment-company > span {
+#payment-company>span {
   padding-left: 3%;
   font-size: 1vw;
   color: #9d9d9d;
 }
 
-#payment-main-items-title > span {
+#payment-main-items-title>span {
   font-size: 1vw;
   font-weight: 600;
   color: #5e5e5e;
@@ -155,10 +153,10 @@
 
 /* 기본항목 */
 #payment-basic-items-content-group {
-    padding-left: 5%;
+  padding-left: 5%;
 }
 
-#payment-sub-items-count-check > select {
+#payment-sub-items-count-check>select {
   padding: 2% 10%;
   border: 1px solid #d9d9d9;
 }
@@ -172,7 +170,7 @@
   margin: 2%;
 }
 
-#payment-option-page > label {
+#payment-option-page>label {
   color: #adadad;
   font-weight: 400;
   font-size: 10px;
@@ -204,7 +202,7 @@
   justify-content: center;
 }
 
-#payment-mileage-content-detail > input {
+#payment-mileage-content-detail>input {
   font-size: 10px;
   border-radius: 0;
   border: 1px solid #d9d9d9;
@@ -212,13 +210,13 @@
   padding: 2%;
 }
 
-#payment-mileage-content-detail > span {
+#payment-mileage-content-detail>span {
   font-size: 8px;
   margin-left: 2%;
   color: #adadad;
 }
 
-#payment-mileage-content > button {
+#payment-mileage-content>button {
   width: 15%;
   height: 30px;
   font-size: 15px;
@@ -247,7 +245,7 @@
   margin: 3% 0;
 }
 
-#payment-request-textbox > textarea {
+#payment-request-textbox>textarea {
   width: 100%;
   height: 100px;
   border: 1px solid #d9d9d9;
@@ -256,7 +254,7 @@
   padding-top: 2%;
 }
 
-#payment-request-textbox > textarea::placeholder {
+#payment-request-textbox>textarea::placeholder {
   color: #adadad;
   padding-left: 2%;
 }
@@ -292,7 +290,7 @@
   bottom: 5%;
 }
 
-#payment-agree-paybtn > div {
+#payment-agree-paybtn>div {
   width: 100%;
   max-width: 768px;
   display: flex;
@@ -302,13 +300,13 @@
   background-color: white;
 }
 
-#payment-agree-paybtn > div > span {
+#payment-agree-paybtn>div>span {
   color: #adadad;
   font-size: 1vw;
   margin: 0 0 0 5%;
 }
 
-#payment-agree-paybtn > div > button {
+#payment-agree-paybtn>div>button {
   margin: 0 5% 0 0;
   width: 25%;
 }

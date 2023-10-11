@@ -1,0 +1,47 @@
+/* class */
+.recieved-proposal-list-item-left>img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+.recieved-proposal-list-item-middle {
+    display: flex;
+    /* Flex 컨테이너로 설정 */
+    flex-direction: column;
+    /* 세로로 배치 */
+    justify-content: center;
+    /* 주축(수직)에서 중앙 정렬 */
+}
+
+.recieved-proposal-list-item-middle-1 {
+    display: flex;
+}
+
+.recieved-proposal-list-item-right {
+    display: flex;
+    align-items: center;
+}
+
+.recieved-proposal-list-item-middle-2 {
+    font-size: 20px;
+    color: #3e9ce4;
+    font-weight: bold;
+}
+
+.recieved-proposal-list-item-middle-3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* id */
+#expert-nickname {
+    font-size: 15px;
+}
+
+#expert-grade {
+    background-color: #e5e5e5;
+    color: #808080;
+    font-size: 12px;
+    border-radius: 5px;
+}

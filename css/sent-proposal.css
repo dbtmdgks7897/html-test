@@ -1,10 +1,19 @@
 select {
     height: 30px;
-    width: 100px;
+    width: 120px;
     margin: 10px;
 }
 
+button {
+    height: 50px;
+    width: 100px;
+}
+
 /* class */
+.inner-container {
+    padding: 0% 10%;
+}
+
 .sent-proposal-list-item {
     display: flex;
     padding: 15px;
@@ -19,6 +28,7 @@ select {
     width: 150px;
     height: 100px;
 }
+
 
 .sent-proposal-list-item-left>img {
     width: 100%;

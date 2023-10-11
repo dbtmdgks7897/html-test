@@ -1,6 +1,6 @@
   /* class */
-  .container {
-      padding: 0% 5%;
+  .inner-container {
+      padding: 0% 10%;
   }
 
   .inner-container-header-description {
@@ -21,6 +21,7 @@
   }
 
   .middle-service-rating {
+      /* width: 80%; */
       display: flex;
       justify-content: space-between;
   }
@@ -31,6 +32,7 @@
   }
 
   .middle {
+      padding: 0px 5px;
       flex: 2;
       /* .middle 요소가 .left보다 두 배 크기를 차지하도록 설정합니다. */
   }
