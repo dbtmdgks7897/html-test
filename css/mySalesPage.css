@@ -30,8 +30,6 @@ button {
    color: #3e9ce4;
 }
 
-
-
 /*판매 정보*/
 
 #mypage-sell-info-title {
@@ -58,9 +56,10 @@ button {
 }
 
 #mypage-sell-info-count-title {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   display: grid;
+   grid-template-columns: 1.3fr 0.8fr 1.1fr 1.3fr;
+   /* justify-content: space-between;
+   align-items: center; */
    padding: 2% 8%;
    margin-bottom: 10%;
    font-size: 15px;
@@ -71,10 +70,14 @@ button {
    text-align: center;
 }
 
+#mypage-sell-info-count-title-3 {
+   padding-left: 25px;
+}
+
 #mypage-sell-issue {
    display: flex;
    background-color: #D2E0F4;
-   border-radius: 10px;
+   border-radius: 5px;
 }
 
 #mypage-sell-issue>div {
@@ -221,7 +224,7 @@ button {
    justify-content: space-between;
    margin-bottom: 15px;
    margin-top: 10px;
-   padding-left: 10px;
+   padding: 0px 10px
 }
 
 .my-sales-status-inner-box3-text {
@@ -233,11 +236,10 @@ button {
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-right: 5px;
-
 }
 
 button {
    width: 100px;
    height: 30px;
+   margin-right: 5px;
 }
