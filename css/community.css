@@ -1,55 +1,64 @@
-
 table {
     border-collapse: collapse;
     width: 100%;
 }
 
-th{
+th {
+    height: 70px;
     text-align: center;
-    padding: 1vw;
+    padding: 4.5px;
 }
 
 td {
+    height: 70px;
     text-align: left;
-    padding: 1vw;
+    padding: 10px;
 }
 
 tr:not(:first-child):hover {
-    background-color: #f5f5f5; /* 첫 번째 행을 제외한 다른 행에 hover 효과 적용 */
+    background-color: #f5f5f5;
+    /* 첫 번째 행을 제외한 다른 행에 hover 효과 적용 */
 }
 
 /* class */
-.inner-container-body-filter-btn{
+.inner-container-body-filter-btn {
     width: 50%;
-    background-color: #808080;
+    height: 30px;
+    margin-top: 30px;
+    background-color: #f2f2f2;
     display: inline-flex;
     padding: 3px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
-.inner-container-body-filter-btn > button{
+
+.inner-container-body-filter-btn>button {
     width: 33.33333333333%;
-    background-color: #808080;
+    background-color: #f2f2f2;
     color: black;
-    
 }
-.inner-container-body-filter-btn > button:hover{
+
+.inner-container-body-filter-btn>button:hover {
     background-color: white;
 }
 
-.inner-container-body-table{
+.inner-container-body-table {
     border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px;
+    margin-top: 20px;
 }
-.inner-container-body-table > table{
+
+.inner-container-body-table>table {
     padding: 10px;
 }
 
 .inner-container-body-write-btn {
+    margin-top: 10px;
     display: flex;
     justify-content: end;
 }
-.inner-container-body-write-btn > button {
+
+.inner-container-body-write-btn>button {
     color: black;
     background-color: white;
     border: 1px solid black;
@@ -58,24 +67,29 @@ tr:not(:first-child):hover {
 }
 
 .inner-container-body-search {
+    margin-top: 10px;
     display: flex;
     justify-content: end;
 }
-.inner-container-body-search > div{
+
+.inner-container-body-search>div {
     border: 1px solid black;
     display: flex;
 }
-.inner-container-body-search > div > select {
+
+.inner-container-body-search>div>select {
     border: none;
 }
-.inner-container-body-search > div > input {
+
+.inner-container-body-search>div>input {
     border: none;
     border-left: 1px solid black;
     border-right: 1px solid black;
     height: 100%;
 }
-.inner-container-body-search > div > button {
-    background-color: #fff;
+
+.inner-container-body-search>div>button {
+    background-color: white;
     color: black;
     padding: 3px;
 }
@@ -83,13 +97,15 @@ tr:not(:first-child):hover {
 .inner-container-body-paging {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
-.inner-container-body-paging > ul {
+
+.inner-container-body-paging>ul {
     list-style-type: none;
     display: flex;
 }
 
-.inner-container-body-paging > ul > a {
+.inner-container-body-paging>ul>a {
     padding: 3px;
     color: black;
     border: 1px solid black;
