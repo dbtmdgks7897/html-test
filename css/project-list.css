@@ -1,0 +1,13 @@
+.deadline {
+    position: absolute;
+    /* 부모 요소에 대해 절대 위치로 설정 */
+    top: 0px;
+    /* 위에서 10px 떨어진 위치 (조정 가능) */
+    right: 0px;
+    /* 오른쪽에서 10px 떨어진 위치 (조정 가능) */
+    padding: 5px;
+    /* 아이콘과 텍스트 사이의 간격 (조정 가능) */
+    border-radius: 50%;
+    /* 아이콘 모서리 둥글게 (원하는 값으로 조정 가능) */
+    color: white;
+}

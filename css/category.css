@@ -76,6 +76,7 @@
 
 .service-writer {
     margin-top: 3px;
+    color: #3e9ce4;
 }
 
 .card-title {
@@ -104,5 +105,5 @@
 
 /* id */
 #badge {
-    background-color: #808080;
+    background-color: #D2E0F4;
 }

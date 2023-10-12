@@ -64,16 +64,20 @@
 
             </div>
             <div id="mypage-sell-info-count-title">
-              <div id="mypage-sell-info-count-title-1">구매완료</div>
+              <div id="mypage-sell-info-count-title-1">작업 완료</div>
               <div id="mypage-sell-info-count-title-2">작업 진행중</div>
-              <div id="mypage-sell-info-count-title-3">작업물 도착</div>
-              <div id="mypage-sell-info-count-title-4">작성 가능한 평가</div>
+              <div id="mypage-sell-info-count-title-3">작업물 발송</div>
+              <div id="mypage-sell-info-count-title-4">수정 요청</div>
             </div>
           </div>
 
           <div id="mypage-sell-issue">
             <div class="mypage-sell-issue-delay">
-              <div>주문취소</div>
+              <div>발송지연</div>
+              <div>0건</div>
+            </div>
+            <div class="mypage-sell-issue-delay">
+              <div>거래취소</div>
               <div>0건</div>
             </div>
           </div>
@@ -86,6 +90,11 @@
         <span>~</span>
         <input class="date" type="date" name="" id="" />
       </div>
+      <form action="">
+        <label><input type="radio" name="sort" value="update"> 업데이트 순</label>
+        <label><input type="radio" name="sort" value="transaction-completed"> 거래 완료 순</label>
+        <label><input type="radio" name="sort" value="ㅐrder-date"> 주문일시 순</label>
+      </form>
 
       <!-- 서비스 상태 -->
       <div class="my-sales-status">
@@ -97,7 +106,6 @@
             <div>
               {<span class="status-schedule-font">거래 완료 일시</span>}
             </div>
-            <div>{<span class="status-schedule-font">주문 일시</span>}</div>
           </div>
         </div>
         <div class="my-sales-status-inner-box2">
@@ -125,15 +133,6 @@
               <div class="expert-nickname">{전문가 닉네임}</div>
             </div>
             <div class="expert-information-2">메세지 보내기</div>
-          </div>
-        </div>
-        <div class="my-sales-status-inner-box3">
-          <div class="my-sales-status-inner-box3-text">
-            수정요청을 하시거나 구매확정을 위해 평가를 남겨주세요
-          </div>
-          <div class="my-sales-status-inner-box3-button">
-            <button style="cursor: pointer">수정요청</button>
-            <button style="cursor: pointer">평가남기기</button>
           </div>
         </div>
       </div>
@@ -148,7 +147,6 @@
             <div>
               {<span class="status-schedule-font">거래 완료 일시</span>}
             </div>
-            <div>{<span class="status-schedule-font">주문 일시</span>}</div>
           </div>
         </div>
         <div class="my-sales-status-inner-box2">
@@ -176,11 +174,6 @@
               <div class="expert-nickname">{전문가 닉네임}</div>
             </div>
             <div class="expert-information-2">메세지 보내기</div>
-          </div>
-        </div>
-        <div class="my-sales-status-inner-box3">
-          <div class="my-sales-status-inner-box3-text">
-            구매확정 후 A/S 및 환불 관련사항은 전문가에게 문의해주세요.
           </div>
         </div>
       </div>
@@ -193,7 +186,6 @@
             <div>
               {<span class="status-schedule-font">거래 완료 일시</span>}
             </div>
-            <div>{<span class="status-schedule-font">주문 일시</span>}</div>
           </div>
         </div>
         <div class="my-sales-status-inner-box2">
@@ -223,12 +215,47 @@
             <div class="expert-information-2">메세지 보내기</div>
           </div>
         </div>
-        <div class="my-sales-status-inner-box3">
-          <div class="my-sales-status-inner-box3-text">
-            구매확정 후 A/S 및 환불 관련사항은 전문가에게 문의해주세요.
+      </div>
+      <div class="my-sales-status">
+        <div class="my-sales-status-inner-box1">
+          <div class="all-status">
+            {<span class="all-status-font">전체 상태</span>}
+          </div>
+          <div class="status-schedule">
+            <div>
+              {<span class="status-schedule-font">거래 완료 일시</span>}
+            </div>
+          </div>
+        </div>
+        <div class="my-sales-status-inner-box2">
+          <div class="my-sales-status-inner-img">
+            <img src="./img/square.png" alt="" />
+          </div>
+          <div class="my-sales-status-inner-service-information">
+            <div class="my-sales-status-inner-service-information-inner-box">
+              <div class="my-sales-status-inner-service-name">
+                {<span class="service-name-font">서비스 이름</span>}
+              </div>
+              <div class="my-sales-status-inner-service-number">
+                {<span class="service-number-font">서비스 번호</span>}
+              </div>
+            </div>
+            <div class="my-sales-status-inner-service-price">
+              {<span class="service-price-font">결제 금액</span>}
+            </div>
+          </div>
+          <div class="expert-information">
+            <div class="expert-information-1">
+              <div class="expert-information-img">
+                <img src="./img/square.png" alt="" />
+              </div>
+              <div class="expert-nickname">{전문가 닉네임}</div>
+            </div>
+            <div class="expert-information-2">메세지 보내기</div>
           </div>
         </div>
       </div>
+      <!-- 서비스 상태 더미 끝 -->
     </div>
   </div>
   <footer></footer>

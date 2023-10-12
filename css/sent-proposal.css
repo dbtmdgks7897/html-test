@@ -4,11 +4,6 @@ select {
     margin: 10px;
 }
 
-button {
-    height: 50px;
-    width: 100px;
-}
-
 /* class */
 .inner-container {
     padding: 0% 10%;
@@ -37,7 +32,10 @@ button {
 
 .sent-proposal-list-item-left>span {
     position: absolute;
-    left: 0;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    font-size: 10px;
 }
 
 .sent-proposal-list-item-middle {
@@ -46,11 +44,37 @@ button {
     flex: 2;
 }
 
-.sent-proposal-list-item-middle-info {
-    display: flex;
+.sent-proposal-list-item-middle-2 {
+    font-size: 15px;
+    margin-top: 10px;
 }
 
-.sent-proposal-list-item-middle-title {
-    font-size: 20px;
-    margin-bottom: 10px;
+.recieved-proposal-list-item-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recieved-proposal-list-item-right>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sent-proposal-list-item-right-proposal-status {
+    width: 80%;
+    height: 50px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
+.project-shortcut {
+    font-size: 15px;
+}
+
+.sent-proposal-list-item-right-proposal-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }

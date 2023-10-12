@@ -25,6 +25,14 @@
     text-align: center;
 }
 
+.recieved-proposal-list-item-right-proposal-status {
+    height: 50px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+}
+
 .recieved-proposal-list-item-middle-2 {
     font-size: 20px;
     color: #3e9ce4;

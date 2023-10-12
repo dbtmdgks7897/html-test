@@ -66,6 +66,15 @@
 
 }
 
+.mypage-sell-issue-delay {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    align-items: center;
+    height: 50px;
+    font-weight: bold;
+}
+
 /* id */
 #mypage-title {
     padding: 5% 0 3% 0;
@@ -208,6 +217,7 @@
     color: #adadad;
 }
 
+
 /*판매 정보*/
 
 #mypage-sell-info-title {
@@ -265,6 +275,11 @@
     align-items: center;
     height: 50px;
     font-weight: bold;
+}
+
+
+#mypage-sell-issue>div {
+    flex-grow: 1;
 }
 
 
