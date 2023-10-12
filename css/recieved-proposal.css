@@ -21,6 +21,8 @@
 .recieved-proposal-list-item-right {
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .recieved-proposal-list-item-middle-2 {
@@ -33,6 +35,14 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+.ask {
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: underline;
+    /* 밑줄 스타일 적용 */
+}
+
 
 /* id */
 #expert-nickname {
