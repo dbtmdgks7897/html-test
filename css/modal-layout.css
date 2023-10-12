@@ -12,11 +12,12 @@
 }
 
 .modal-container-inner-box {
+    border: 1px solid red;
     position: absolute;
     background-color: #ffffff;
     width: 500px;
     height: 600px;
-    padding: 15px;
+    padding: 50px;
     font-size: 18px;
 }
 
