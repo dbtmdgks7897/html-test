@@ -1,14 +1,20 @@
 /* class */
-.category-detail{
+.font-bold {
+    font-weight: bold;
+}
+
+.category-detail {
     height: 30px;
     margin-top: 10px;
     border-color: #adadad;
 }
-.sort{
+
+.sort {
     height: 30px;
     margin-top: 10px;
     border-color: #adadad;
 }
+
 .sort-dropdowns {
     display: flex;
     justify-content: space-between;
@@ -17,24 +23,33 @@
 .service-card-list {
     height: 100%;
     margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 0px 4px;
-    gap: 10px;
+
+}
+
+.service-card-list-inner-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 3개의 열 생성 */
+    grid-gap: 25px;
+    /* 그리드 아이템 사이의 간격 설정 */
+    margin-top: 20px;
+
 }
 
 .service-card {
     /* 크기 조정 필요 */
-    width: 120px;
-    gap: 5px;
+    height: 30%;
     margin-bottom: 10px;
-    height: 40%;
+    font-size: 12px;
+}
+
+.service-title {
     font-size: 12px;
 }
 
 .service-image {
-    height: 150px;
+    height: 100px;
+    width: 100%;
     position: relative;
 }
 
@@ -59,10 +74,19 @@
     /* 아이콘 모서리 둥글게 (원하는 값으로 조정 가능) */
 }
 
+.service-writer {
+    margin-top: 3px;
+}
+
+.card-title {
+    margin-top: 3px;
+}
+
 .service-price-box {
     display: flex;
     justify-content: flex-end;
     font-size: 15px;
+    margin-top: 5px;
 }
 
 .service-rating-box {
@@ -70,6 +94,7 @@
     justify-content: flex-end;
     font-size: 10px;
     color: #adadad;
+    margin-top: 3px;
 }
 
 .rating-score-box {
