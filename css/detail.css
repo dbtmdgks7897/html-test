@@ -1,7 +1,7 @@
 /* 맨위 미리보기? */
 .container {
     padding: 0;
-    height: 2150px;
+    height: 2200px;
 }
 
 .container-inner-box {
@@ -265,8 +265,6 @@
     margin-bottom: 15px;
     margin-top: 30px;
     border-radius: 5px;
-
-
     text-decoration: underline;
     cursor: pointer;
 }
@@ -410,4 +408,15 @@
 
 .payment-agree-paybtn>div>div>img {
     width: 4vw;
+}
+
+.all-show-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.all-show-button>button {
+    height: 50px;
+    width: 80%;
 }
