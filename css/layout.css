@@ -39,7 +39,7 @@ a {
   background-color: white;
   /* border: 1px solid black; */
   width: 100%;
-  height: 100%;
+  height: 100vh;
   /* 컨테이너 안에 컨텐츠 들어가면 삭제 필요 */
   min-height: 800px;
   max-width: 768px;

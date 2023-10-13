@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/client-project-request.css" />
+    <link rel="stylesheet" href="css/introduction-expert.css" />
+    <title>프로젝트 제안 상세 페이지(전문가의 제안서)</title>
+</head>
+
+<body>
+    <header>
+        <div class="search">
+            <input type="text" placeholder="검색어를 입력해주세요" class="search-field" />
+            <button type="button" class="search-button">
+                <img src="https://via.placeholder.com/30" alt="" />
+            </button>
+        </div>
+        <div class="user-info">
+            <div>
+                <img src="https://via.placeholder.com/40" alt="" />
+            </div>
+            <div class="nickname">닉네임</div>
+        </div>
+        <div class="alarm">
+            <div class="alarm-image">
+                <img src="https://via.placeholder.com/30x50" alt="" />
+            </div>
+            <div class="alarm-state-image">
+                <img src="https://via.placeholder.com/10" alt="" />
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="inner-container">
+            <div class="inner-container-header">
+                <div class="title">
+                    {<span style="color: #3e9ce4;">전문가 닉네임</span>}의 제안
+                </div>
+                <hr />
+            </div>
+            <div class="inner-container-body">
+                <div class="inner-container-body-profile-image">
+                    <img src="https://via.placeholder.com/100" alt="프로필 이미지" />
+                    <div>
+                        <div>{전문가 등급}</div>
+                        <div>{전문가 닉네임}</div>
+                        <div>⭐⭐⭐⭐⭐{평점}|{후기 개수}</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="activity-introduction">
+                    <div> <span class="font-20-bold">활동소개</span></div>
+                    <div class="activity-introduction-detail">
+                        <div class="display-flex-between">
+                            <div>총 서비스 작업 수</div>
+                            <div>{총 서비스 작업 수} 개</div>
+                        </div>
+                        <div class="display-flex-between">
+                            <div>총 프로젝트 작업 수</div>
+                            <div>{총 프로젝트 작업 수} 개</div>
+                        </div>
+                        <div class="display-flex-between">
+                            <div>평균 응답 시간</div>
+                            <div>{평균 응답 시간} 분 이내</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div> <span class="font-20-bold">자기소개</span></div>
+                    <div>{<span class="font-blue">자기소개 내용</span>}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
