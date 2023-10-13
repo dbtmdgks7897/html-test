@@ -1,0 +1,43 @@
+input {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #adadad;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 30px;
+}
+
+.modal-container-inner-box {
+    position: absolute;
+    background-color: #ffffff;
+    width: 700px;
+    height: 500px;
+    padding: 50px;
+    font-size: 18px;
+}
+
+.write-request {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.modal-container-inner-box>div {
+    margin-top: 10px;
+}
+
+.modal-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.font-lightly {
+    color: #adadad;
+    font-size: 15px;
+}
+
+.modal-button-box {
+    display: flex;
+    justify-content: center;
+}

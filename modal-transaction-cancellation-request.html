@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/modal-layout.css" />
+    <link rel="stylesheet" href="css/modal-check-order-information.css" />
+    <title>거래취소요청</title>
+</head>
+
+<body>
+    <div class="modal-container">
+        <div class="modal-container-inner-box">
+            <div class="modal-title">거래취소요청</div>
+            <hr>
+
+            <div><span class="font-20">거래 취소 요청 사유 선택</span></div>
+            <div>
+                <select name="" id="">
+                    <option value="" disabled selected>거래요청사유를 선택해주세요</option>
+                </select>
+            </div>
+            <div class="reason-message"><span class="font-20">상대방에게 보내는 메세지</span></div>
+            <input type="text" placeholder="30자 내외로 내용을 입력 해 주세요">
+            <div class="check-list">
+                <div class=""> 꼭 확인해주세요! <span class="font-red">필수</span></div>
+                <div class="display-flex">
+                    <span class="display-flex-1 font-15 font-adadad">상대가 24시간 이내에 수락/거절하지 않을 경우, 자동으로 <br>취소됩니다.</span>
+                    <input class="display-flex-2" type="checkbox">
+                </div>
+                <div class="display-flex">
+                    <span class="display-flex-1 font-15 font-adadad">거래금액은 취소 후 결제수단으로 환불 받으실 수 있습니다.</span>
+                    <input class="display-flex-2" type="checkbox">
+                </div>
+            </div>
+            <div class="modal-button-box">
+                <button class="modal-button">거래취소요청</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

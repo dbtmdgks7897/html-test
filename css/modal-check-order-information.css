@@ -1,0 +1,164 @@
+select {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+input {
+    width: 99%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+/* class */
+
+.font-15 {
+    font-size: 15px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-25 {
+    font-size: 25px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-adadad {
+    color: #adadad;
+}
+
+.font-red {
+    color: red;
+}
+
+.font-blue {
+    color: #3e9ce4;
+}
+
+.reason-message {
+    margin-top: 10px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display-flex-1 {
+    flex: 20;
+}
+
+.display-flex-2 {
+    flex: 1;
+}
+
+.check-list>div>input {
+    height: 100%
+}
+
+.modal-button-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.check-list>div {
+    margin-top: 10px;
+}
+
+.evaluation-subtitle {
+    margin-top: 10px;
+}
+
+.evaluation-contents {
+    border: 1px solid #adadad;
+}
+
+/* 파일 */
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.filebox label {
+    width: 80px;
+    height: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #999;
+    vertical-align: middle;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+/* named upload */
+.filebox .upload-name {
+    display: inline-block;
+    height: 35px;
+    font-size: 18px;
+    padding: 0 10px;
+    vertical-align: middle;
+    background-color: #f5f5f5;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+}
+
+.upload-name {
+    position: relative;
+    /* 위치 속성 추가 */
+    top: -8px;
+    /* top 값 조정 */
+}
+
+/* 작업일 연장 */
+.expected-shipping-date {
+    padding: 5px 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.extension-inner-box>div {
+    margin-top: 10px;
+}
+
+.extension-detail {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.extention-detail-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-button-box>button {
+    margin-top: 80px;
+}
+
+/* 작업물 발송 */
+.client-message {
+    height: 100px;
+    border: 1px solid #adadad;
+}
