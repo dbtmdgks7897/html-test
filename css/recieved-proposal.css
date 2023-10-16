@@ -12,6 +12,7 @@
     /* 세로로 배치 */
     justify-content: center;
     /* 주축(수직)에서 중앙 정렬 */
+    margin-left: 20px;
 }
 
 .recieved-proposal-list-item-middle-1 {

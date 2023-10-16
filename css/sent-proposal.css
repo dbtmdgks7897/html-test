@@ -10,11 +10,11 @@ select {
 }
 
 .sent-proposal-list-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     padding: 15px;
     border: 1px solid #adadad;
     border-radius: 5px;
-    justify-content: space-between;
     margin-top: 20px;
 }
 
@@ -43,6 +43,9 @@ select {
     padding: 20px 20px;
     flex: 2;
 }
+
+
+
 
 .sent-proposal-list-item-middle-2 {
     font-size: 15px;
