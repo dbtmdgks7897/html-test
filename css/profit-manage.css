@@ -118,6 +118,10 @@
     margin-top: 20px;
 }
 
+.profit-log {
+    margin-top: 30px;
+}
+
 /* 수익금 내역, 출금 내역 */
 .profit-log-header {
     height: 50px;

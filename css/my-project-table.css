@@ -5,7 +5,7 @@
 .inner-container-body-project-item {
     display: flex;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 1px solid #adadad;
     justify-content: space-between;
     margin-top: 10px;
@@ -63,7 +63,7 @@
     height: 50px;
     justify-content: center;
     background-color: #adadad;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .project-item-right-bottom {

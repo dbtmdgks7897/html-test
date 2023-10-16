@@ -17,14 +17,20 @@
   .inner-container-body-service {
       display: flex;
       justify-content: space-between;
-      /* align-items: center; */
+      margin: 10px 0;
+  }
+
+  .middle-service-number {
+      font-size: 15px;
   }
 
   .middle-service-rating {
       /* width: 80%; */
       display: flex;
       justify-content: space-between;
+      font-size: 15px;
   }
+
 
   .left {
       flex: 0.5;
@@ -35,6 +41,10 @@
       padding: 0px 5px;
       flex: 2;
       /* .middle 요소가 .left보다 두 배 크기를 차지하도록 설정합니다. */
+      display: flex;
+      flex-direction: column;
+      /* 이 부분이 가로 또는 세로 방향을 결정합니다. */
+      justify-content: center;
   }
 
   .right {
