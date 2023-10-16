@@ -1,6 +1,7 @@
 /* 맨위 미리보기? */
 .container {
     padding: 0;
+    margin-bottom: 120px;
     height: 2200px;
 }
 
@@ -374,14 +375,13 @@
 /*결제 동의 & 결제하기 버튼 */
 .payment-agree-paybtn {
     width: 100%;
-    height: 10%;
+    height: 80px;
     display: flex;
     justify-content: center;
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 5%;
-    z-index: 2;
+    bottom: 77px;
 }
 
 .payment-agree-paybtn>div {
@@ -391,8 +391,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 1px 1px 5px 1px #d9d9d9 inset;
     background-color: white;
+    border: solid 1px #adadad;
 }
 
 .payment-agree-paybtn>div>div {
@@ -409,7 +409,8 @@
 }
 
 .payment-agree-paybtn>div>div>img {
-    width: 4vw;
+    /* width: 100%; */
+    padding: 5px;
 }
 
 .all-show-button {

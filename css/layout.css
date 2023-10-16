@@ -149,6 +149,7 @@ footer {
   padding: 5px 30px;
   display: flex;
   align-items: center;
+  font-size: 15px;
 }
 
 .user-infor img {
@@ -215,6 +216,7 @@ footer {
   align-items: center;
   text-align: center;
   width: 100%;
+  font-size: 15px;
 }
 
 .footer-center-element {
@@ -223,6 +225,7 @@ footer {
   align-items: center;
   text-align: center;
   width: 200px;
+  font-size: 15px;
 }
 
 .footer-center-element img {
