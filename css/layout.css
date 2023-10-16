@@ -155,8 +155,56 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 6rem;
   width: 100%;
-  height: 56px;
+  height: 77px;
   background-color: #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-left, .footer-right{
+  display: flex;
+  width: 300px;
+}
+
+.footer-center {
+  display: inline-block;
+  position: relative;
+  bottom: 20px;
+}
+
+.footer-center:before {
+  border-top: 200px solid #e6e6e6;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  content: "";
+  height: 60px;
+  left: -60px;
+  position: absolute;
+  top: -20px;
+  width: 0;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.footer-left-element, .footer-right-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-center-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+}
+
+.footer-center-element img {
+  z-index: 1;
+  border-radius: 50%;
 }
