@@ -30,6 +30,7 @@ img {
 .message-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .message-title>div {
@@ -115,6 +116,7 @@ img {
 .add-ons {
     border-left: 1px solid #f2f2f2;
     border-right: 1px solid #f2f2f2;
+    padding: 10px;
 }
 
 .add-ons>button {

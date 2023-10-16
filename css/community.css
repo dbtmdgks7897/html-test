@@ -28,7 +28,6 @@ tr:not(:first-child):hover {
     background-color: #f2f2f2;
     display: inline-flex;
     padding: 3px;
-    border-radius: 5px;
 }
 
 .inner-container-body-filter-btn>button {
@@ -43,7 +42,7 @@ tr:not(:first-child):hover {
 
 .inner-container-body-table {
     border: 1px solid black;
-    border-radius: 30px;
+    border-radius: 10px;
     padding: 10px;
     margin-top: 20px;
 }
@@ -59,11 +58,7 @@ tr:not(:first-child):hover {
 }
 
 .inner-container-body-write-btn>button {
-    color: black;
-    background-color: white;
-    border: 1px solid black;
     padding: 5px 10px;
-    border-radius: 0px;
 }
 
 .inner-container-body-search {
@@ -89,8 +84,6 @@ tr:not(:first-child):hover {
 }
 
 .inner-container-body-search>div>button {
-    background-color: white;
-    color: black;
     padding: 3px;
 }
 
@@ -98,6 +91,7 @@ tr:not(:first-child):hover {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    border-radius: 0px;
 }
 
 .inner-container-body-paging>ul {
@@ -108,5 +102,4 @@ tr:not(:first-child):hover {
 .inner-container-body-paging>ul>a {
     padding: 3px;
     color: black;
-    border: 1px solid black;
 }

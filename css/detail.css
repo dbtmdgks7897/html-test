@@ -79,6 +79,7 @@
     padding: 4px 5px;
     line-height: 1;
     /* 텍스트의 위아래 간격을 동일하게 설정 */
+    border-radius: 5px;
 }
 
 .title-2-heart {
@@ -313,6 +314,7 @@
 .review-content-photo_review-text,
 .review-content-all_review-text {
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 
