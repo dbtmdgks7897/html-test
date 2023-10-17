@@ -256,8 +256,34 @@ footer {
   border-radius: 50%;
 }
 
+/* width가 820px 이하일시 로고 안보이게 설정 */
 @media screen and (max-width: 820px) {
   .ai-logo {
     display: none;
+  }
+}
+
+/* width가 500px이하일시 footer변경 */
+@media screen and (max-width: 500px) {
+  .footer-center:before {
+    border-top: 130px solid #e6e6e6;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    content: "";
+    height: 50px;
+    left: -50px;
+    position: absolute;
+    top: -10px;
+    width: 0;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .footer-left-element, .footer-right-element {
+    font-size: 10px;
+  }
+
+  .footer-center-element {
+    width: 100px;
   }
 }
