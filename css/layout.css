@@ -278,7 +278,7 @@ footer {
 /* width가 500px이하일시 footer변경 */
 @media screen and (max-width: 600px) {
   .container {
-    padding: 20px 35px 40px 35px;
+    padding: 20px 0px 40px 0px;
   }
   
   .footer-center:before {
