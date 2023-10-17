@@ -276,7 +276,7 @@ footer {
 }
 
 /* width가 500px이하일시 footer변경 */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .footer-center:before {
     border-top: 130px solid #e6e6e6;
     border-left: 100px solid transparent;
