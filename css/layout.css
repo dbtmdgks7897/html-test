@@ -256,3 +256,8 @@ footer {
   border-radius: 50%;
 }
 
+@media screen and (max-width: 820px) {
+  .ai-logo {
+    display: none;
+  }
+}
